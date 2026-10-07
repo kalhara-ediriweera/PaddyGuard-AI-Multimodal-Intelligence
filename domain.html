@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domain &amp; Methodology | PaddyGuard AI Research</title>
+  <meta name="description" content="Academic domain analysis, literature survey, research gap, objectives, methodology, and technologies used for PaddyGuard AI (R26-SE-015, SLIIT).">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#059669" />
+          <path d="M18 46 C 18 28, 30 14, 46 16 C 44 32, 32 46, 18 46 Z" fill="#ffffff" />
+          <circle cx="24" cy="24" r="3.5" fill="#38bdf8" />
+          <circle cx="38" cy="28" r="3" fill="#38bdf8" />
+          <circle cx="32" cy="38" r="3" fill="#fbbf24" />
+        </svg>
+        <span class="logo-text">PaddyGuard <span style="color:var(--brand-emerald)">AI</span></span>
+        <span class="logo-badge">R26-SE-015</span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="domain.html" class="nav-link active">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="global-search-btn" class="search-trigger-btn" aria-label="Open Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn icon-btn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <span style="font-weight:800; color:var(--brand-emerald)">PaddyGuard AI</span>
+      <button id="drawer-close-btn" class="icon-btn">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="domain.html" class="mobile-nav-link active">Domain &amp; Methodology</a></li>
+      <li><a href="milestones.html" class="mobile-nav-link">Milestones Tracker</a></li>
+      <li><a href="documents.html" class="mobile-nav-link">Documents Repository</a></li>
+      <li><a href="presentations.html" class="mobile-nav-link">Presentations Deck</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Research Team</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Supervision</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content">
+    <!-- Header -->
+    <section class="section page-header-section">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Research Domain</span>
+        </nav>
+        <h1 class="page-title">Research Domain &amp; Methodology</h1>
+        <p class="page-subtitle">
+          Authoritative academic documentation organized according to official university guidelines across literature survey, research gap, problem definition, objectives, methodology, and technologies used.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sub-navigation tabs (Strictly matching university slide criteria) -->
+    <nav class="sub-nav-bar" aria-label="Domain Sections Navigation">
+      <div class="container">
+        <div class="sub-nav-links">
+          <a href="#literature-survey" class="sub-nav-link active">1. Literature Survey</a>
+          <a href="#research-gap" class="sub-nav-link">2. Research Gap</a>
+          <a href="#research-problem" class="sub-nav-link">3. Research Problem</a>
+          <a href="#research-objectives" class="sub-nav-link">4. Research Objectives</a>
+          <a href="#methodology" class="sub-nav-link">5. Methodology</a>
+          <a href="#technologies-used" class="sub-nav-link">6. Technologies Used</a>
+          <a href="#datasets-strategy" class="sub-nav-link">Datasets</a>
+          <a href="#references" class="sub-nav-link">References</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== 1. LITERATURE SURVEY ==================== -->
+    <section class="section" id="literature-survey">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 1</span>
+          <h2 class="section-title">Literature Survey</h2>
+          <p class="section-subtitle">
+            Critical analysis of state-of-the-art research across all 4 research components
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="gap:2rem;">
+          <!-- Leaf Disease Literature -->
+          <div class="card" style="border-left:4px solid var(--brand-emerald);">
+            <div style="font-size:1.5rem; margin-bottom:0.5rem;">🌿</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">1. Deep Learning for Rice Leaf Disease Classification</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+              Mohanty et al. [6] achieved 99.35% accuracy using AlexNet on PlantVillage, while Lu et al. [7] designed a CNN achieving 94.7% specifically for rice diseases. Chen et al. [8] showed that <em>EfficientNet</em> architectures (EfficientNetB3/B4) achieve comparable accuracy to ResNet models with significantly fewer parameters. However, Ferentinos [9] highlighted that accuracy sharply drops on real field images, and none of these models incorporate Out-of-Distribution rejection mechanisms to handle non-rice foliage.
+            </p>
+          </div>
+
+          <!-- Pest Detection Literature -->
+          <div class="card" style="border-left:4px solid var(--brand-gold);">
+            <div style="font-size:1.5rem; margin-bottom:0.5rem;">🦗</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">2. Deep Learning &amp; YOLO for Rice Pest Detection</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+              Pest infestations cause 20% to 40% yield loss in rice worldwide (Savary et al. [2]). Hu et al. [5] demonstrated that CNNs extract complex visual features of insect pests from agricultural imagery, outperforming traditional ML. Zheng et al. [3] adapted lightweight YOLOv8 models for real-time paddy insect detection. However, existing pest systems rely on closed-set training and misidentify unfamiliar non-pest insects as major pests, triggering unwarranted spraying.
+            </p>
+          </div>
+
+          <!-- Voice / NLP Literature -->
+          <div class="card" style="border-left:4px solid var(--brand-cyan);">
+            <div style="font-size:1.5rem; margin-bottom:0.5rem;">🎙️</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">3. Speech Recognition &amp; NLP in Agriculture</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+              Smallholder farmers in South Asia often experience low digital literacy and lack technical botanical vocabulary. Devlin et al. [15] demonstrated bidirectional transformer representations (BERT) for text understanding. Prior agricultural advisory systems predominantly depend on text-based web forms in English. Developing end-to-end speech recognition (Whisper / Vosk) with domain symptom extraction in Sinhala represents an under-explored, high-impact research opportunity.
+            </p>
+          </div>
+
+          <!-- Treatment / RAG Literature -->
+          <div class="card" style="border-left:4px solid var(--brand-purple);">
+            <div style="font-size:1.5rem; margin-bottom:0.5rem;">💊</div>
+            <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">4. RAG Chatbots &amp; Out-of-Distribution Reliability</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+              Lewis et al. [16] pioneered Retrieval-Augmented Generation (RAG) to ground LLMs in authoritative knowledge. In agriculture, unconstrained LLMs hallucinate illegal pesticides or toxic dosage levels. For reliability, Liang et al. [10] (ODIN), Lee et al. [11] (Mahalanobis Distance), and Bendale &amp; Boult [12] (OpenMax) established mathematical frameworks to reject out-of-distribution inputs. Selvaraju et al. [13] introduced Grad-CAM for visual saliency verification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. RESEARCH GAP ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="research-gap">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 2</span>
+          <h2 class="section-title">Research Gap</h2>
+          <p class="section-subtitle">
+            Limitations of existing solutions versus the proposed PaddyGuard AI architecture
+          </p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Evaluation Dimension</th>
+                <th>Existing Agricultural Systems (Plantix, Rice Doctor, Paddy Doctor)</th>
+                <th>PaddyGuard AI Multimodal Research System</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Input Modalities</strong></td>
+                <td>Image-only or manual text questionnaires. Excludes low-literacy farmers.</td>
+                <td><strong>Multimodal:</strong> Ingests Sinhala spoken speech + foliar leaf images + field pest images.</td>
+              </tr>
+              <tr>
+                <td><strong>Foliar Disease Scope (C2)</strong></td>
+                <td>Closed-world CNNs; forces non-rice leaves/weeds into disease classes with high false confidence.</td>
+                <td><strong>Open-Set Aware:</strong> Integrated OOD screening (ODIN, Mahalanobis, OpenMax) rejects non-rice inputs.</td>
+              </tr>
+              <tr>
+                <td><strong>Pest Detection Scope (C4)</strong></td>
+                <td>Limited insect datasets; misidentifies benign insects as pests; no unknown insect rejection.</td>
+                <td><strong>YOLOv8 + OOD:</strong> Detects target pests while rejecting unfamiliar insect species.</td>
+              </tr>
+              <tr>
+                <td><strong>Speech &amp; Language (C1)</strong></td>
+                <td>English or closed-form menus. Lacks local phonetic support for rural dialects.</td>
+                <td><strong>Sinhala Voice Pipeline:</strong> Whisper/Vosk ASR + TF-IDF symptom keywords + Sinhala TTS speech response.</td>
+              </tr>
+              <tr>
+                <td><strong>Treatment Guidance (C3)</strong></td>
+                <td>Generic text summaries or black-box LLMs prone to hallucinating toxic pesticide dosages.</td>
+                <td><strong>Hybrid RAG + Expert Rules:</strong> Grounded in IRRI/FAO manuals + deterministic safety barrier + acreage dosage calc.</td>
+              </tr>
+              <tr>
+                <td><strong>Model Interpretability</strong></td>
+                <td>Black-box classification outputs without visual evidence.</td>
+                <td><strong>Grad-CAM Visual Heatmaps:</strong> Visually verifies that model attends to genuine pathological lesions.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. RESEARCH PROBLEM ==================== -->
+    <section class="section" id="research-problem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 3</span>
+          <h2 class="section-title">Research Problem</h2>
+          <p class="section-subtitle">
+            The multi-faceted challenges confronting smallholder paddy farmers in Sri Lanka
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="gap:2rem;">
+          <div class="card">
+            <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Biological &amp; Field Challenges:</h3>
+            <ul style="padding-left:1.25rem; font-size:0.9rem; color:var(--text-secondary); line-height:1.75;">
+              <li><strong>Foliar Disease Epidemics:</strong> Bacterial Blight, Leaf Blast, and Brown Spot destroy between 20% and 80% of paddy harvest if undetected at early tillering stages.</li>
+              <li><strong>Pest Infestation Spread:</strong> Brown planthoppers, stem borers, and leaf folders cause 20% to 40% yield loss and transmit viral dwarf diseases.</li>
+              <li><strong>Extension Officer Shortage:</strong> Rural farming districts have few agricultural officers, causing diagnostic consultation delays of days or weeks.</li>
+              <li><strong>Agrochemical Misuse:</strong> Trial-and-error spraying of uncalibrated pesticides increases costs, harms beneficial predators, and contaminates water cascades.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Technological &amp; AI Limitations:</h3>
+            <ul style="padding-left:1.25rem; font-size:0.9rem; color:var(--text-secondary); line-height:1.75;">
+              <li><strong>Unrealistic Closed-World Assumption:</strong> Deployed AI systems predict unknown weeds or insects as target diseases with dangerously high confidence.</li>
+              <li><strong>Digital Divide &amp; Low Literacy:</strong> Smallholder farmers struggle with English mobile forms and technical botanical terminology.</li>
+              <li><strong>Lack of Multimodal Fusion:</strong> No single platform integrates speech symptoms, leaf pathology, pest vision, and verified chemical advisory.</li>
+              <li><strong>Hallucination Risks:</strong> Generative AI without deterministic expert rules produces hazardous chemical recommendations.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. RESEARCH OBJECTIVES ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="research-objectives">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 4</span>
+          <h2 class="section-title">Research Objectives</h2>
+          <p class="section-subtitle">
+            Main objective and specific objectives allocated equally (25% each) across the 4 modules
+          </p>
+        </div>
+
+        <div class="card" style="border-left:4px solid var(--brand-forest); margin-bottom:2rem;">
+          <h3 style="font-size:1.35rem; margin-bottom:0.5rem;">Main Research Objective</h3>
+          <p style="font-size:1.05rem; color:var(--text-primary); line-height:1.65;">
+            To design, develop, and evaluate <strong>PaddyGuard AI</strong>: a multimodal intelligent decision support system that integrates deep learning foliar disease classification, field pest detection, Sinhala voice-based symptom analysis, Out-of-Distribution (OOD) reliability screening, and a knowledge-driven treatment advisory chatbot with calibrated dosage calculations.
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="gap:2rem;">
+          <!-- Specific Obj C1 -->
+          <div class="card">
+            <span class="badge badge-info" style="margin-bottom:0.5rem;">Component 1 (25% Weight)</span>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Voice-Based Symptom Diagnosis</h4>
+            <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
+              <li>Collect and curate a dedicated Sinhala spoken symptom description corpus from rural farmer interviews.</li>
+              <li>Implement and evaluate speech-to-text transcription using Whisper and Vosk models.</li>
+              <li>Extract clinical symptom entities via TF-IDF and compare BERT text classification against traditional ML baselines.</li>
+              <li>Synthesize diagnostic summaries and guidance into natural Sinhala audio (TTS) for low-literacy users.</li>
+            </ul>
+          </div>
+
+          <!-- Specific Obj C2 -->
+          <div class="card">
+            <span class="badge badge-success" style="margin-bottom:0.5rem;">Component 2 (25% Weight)</span>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Rice Leaf Disease Classification + OOD</h4>
+            <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
+              <li>Curate a balanced 4-class foliar dataset (Bacterial Blight, Leaf Blast, Brown Spot, Healthy) with non-rice OOD probe sets.</li>
+              <li>Benchmark transfer-learning CNN backbones (ResNet50, EfficientNetB3, DenseNet121) targeting &gt; 92% accuracy.</li>
+              <li>Calibrate ODIN, Mahalanobis Distance, and OpenMax to achieve an OOD rejection rate &gt; 85% at FPR95.</li>
+              <li>Generate Grad-CAM heatmaps to visually verify that predictions attend to biologically meaningful lesion regions.</li>
+            </ul>
+          </div>
+
+          <!-- Specific Obj C4 -->
+          <div class="card">
+            <span class="badge badge-warning" style="margin-bottom:0.5rem;">Component 4 (25% Weight)</span>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Rice Pest Detection + OOD</h4>
+            <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
+              <li>Curate representative paddy insect datasets from IP02 and agricultural repositories.</li>
+              <li>Train and evaluate deep detection models (YOLOv8, ResNet50) for Brown Planthopper, Stem Borer, Leaf Folder, Gall Midge.</li>
+              <li>Implement OOD detection mechanisms to identify and reject unknown insects not belonging to the paddy pest taxonomy.</li>
+              <li>Benchmark precision, recall, and detection latency under complex field foliage backgrounds.</li>
+            </ul>
+          </div>
+
+          <!-- Specific Obj C3 -->
+          <div class="card">
+            <span class="badge badge-purple" style="margin-bottom:0.5rem;">Component 3 (25% Weight)</span>
+            <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Treatment Advisory &amp; RAG Chatbot</h4>
+            <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
+              <li>Construct a vectorized agricultural knowledge repository from IRRI Rice Knowledge Bank, FAO, and DOA Sri Lanka guidelines.</li>
+              <li>Implement semantic similarity retrieval using FAISS/ChromaDB paired with LLM response generation.</li>
+              <li>Formulate deterministic expert rules to strictly validate and verify chemical and biological treatment options.</li>
+              <li>Develop a calibrated land acreage-to-dosage sprayer calculator to prevent agrochemical misuse.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. METHODOLOGY ==================== -->
+    <section class="section" id="methodology">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 5</span>
+          <h2 class="section-title">Research Methodology</h2>
+          <p class="section-subtitle">
+            Design Science Research (DSR) lifecycle guiding iterative artifact development
+          </p>
+        </div>
+
+        <div class="card" style="margin-bottom:2rem;">
+          <p>
+            This research adopts the <strong>Design Science Research (DSR)</strong> paradigm (Hevner et al. [13]), which focuses on designing and evaluating innovative technological artifacts to solve practical human problems. The methodology progresses through iterative design, implementation, empirical testing, and refinement cycles across all four research components:
+          </p>
+          <div class="grid grid-3" style="margin-top:1.5rem;">
+            <div style="background:var(--bg-tertiary); padding:1rem; border-radius:var(--radius-md);">
+              <div style="font-weight:700; color:var(--brand-forest); margin-bottom:0.25rem;">Phase 1: Foundations</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">
+                Literature analysis, problem framing, multi-source dataset curation (Kaggle benchmarks, farmer speech recordings, local field photography).
+              </p>
+            </div>
+            <div style="background:var(--bg-tertiary); padding:1rem; border-radius:var(--radius-md);">
+              <div style="font-weight:700; color:var(--brand-forest); margin-bottom:0.25rem;">Phase 2: Model Development</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">
+                CNN leaf transfer learning, YOLOv8 pest training, Whisper ASR phonetic tuning, and FAISS vector knowledge engineering.
+              </p>
+            </div>
+            <div style="background:var(--bg-tertiary); padding:1rem; border-radius:var(--radius-md);">
+              <div style="font-weight:700; color:var(--brand-forest); margin-bottom:0.25rem;">Phase 3: Integration &amp; Evaluation</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin:0;">
+                OOD threshold calibration (ODIN/OpenMax), Grad-CAM expert review, deterministic rule validation, and latency profiling under mobile networks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. TECHNOLOGIES USED ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="technologies-used">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Section 6</span>
+          <h2 class="section-title">Technologies Used</h2>
+          <p class="section-subtitle">
+            Core open-source libraries, deep learning frameworks, and platforms powering the system
+          </p>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card">
+            <span class="badge badge-info" style="margin-bottom:0.5rem;">C1: Voice NLP</span>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Speech &amp; Language</h4>
+            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+              <li>Whisper &bull; Vosk ASR</li>
+              <li>TF-IDF &bull; Scikit-learn</li>
+              <li>BERT &bull; RoBERTa</li>
+              <li>PyTorch &bull; Hugging Face</li>
+              <li>Coqui &bull; Sinhala TTS</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="badge badge-success" style="margin-bottom:0.5rem;">C2: Leaf Vision</span>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Disease &amp; OOD</h4>
+            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+              <li>ResNet50 &bull; EfficientNetB3</li>
+              <li>DenseNet121 &bull; PyTorch</li>
+              <li>ODIN &bull; Mahalanobis Dist</li>
+              <li>OpenMax (EVT Weibull)</li>
+              <li>Grad-CAM &bull; OpenCV</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="badge badge-warning" style="margin-bottom:0.5rem;">C4: Pest Vision</span>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Pest &amp; Localization</h4>
+            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+              <li>YOLOv8 &bull; Ultralytics</li>
+              <li>ResNet50 &bull; EfficientNet</li>
+              <li>OOD Rejection Gate</li>
+              <li>OpenCV &bull; NumPy</li>
+              <li>TensorFlow / PyTorch</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <span class="badge badge-purple" style="margin-bottom:0.5rem;">C3: Advisory &amp; RAG</span>
+            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Knowledge &amp; Rules</h4>
+            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+              <li>Retrieval-Augmented Gen</li>
+              <li>FAISS &bull; ChromaDB</li>
+              <li>Llama / OpenAI API</li>
+              <li>Expert Rule Engine</li>
+              <li>FastAPI &bull; PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DATASETS STRATEGY ==================== -->
+    <section class="section" id="datasets-strategy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Data Strategy</span>
+          <h2 class="section-title">Datasets &amp; Data Collection Strategy</h2>
+          <p class="section-subtitle">
+            Multi-source dataset allocations covering diseases, pests, voice phonetics, and agronomy
+          </p>
+        </div>
+
+        <div class="grid grid-2" id="datasets-cards-grid">
+          <!-- Populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== REFERENCES ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="references">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Citations</span>
+          <h2 class="section-title">Literature References</h2>
+          <p class="section-subtitle">
+            Authoritative publications and standards cited in the research proposal
+          </p>
+        </div>
+
+        <div class="card">
+          <ol style="padding-left:1.5rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.8;" id="ref-list-items">
+            <!-- Populated via script -->
+          </ol>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PaddyGuard <span style="color:var(--brand-emerald)">AI</span></h3>
+          <p>Undergraduate Research Project &bull; SLIIT Faculty of Computing</p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-top:0.5rem;">
+            Project ID: R26-SE-015
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Research Scope</h4>
+          <ul class="footer-links">
+            <li><a href="#literature-survey">Literature Survey</a></li>
+            <li><a href="#research-gap">Research Gap</a></li>
+            <li><a href="#research-problem">Research Problem</a></li>
+            <li><a href="#research-objectives">Research Objectives</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SLIIT Information</h4>
+          <ul class="footer-links">
+            <li><span>Supervisor: Dr. Nathali Silva</span></li>
+            <li><span>Dept. of Information Technology</span></li>
+            <li><span>March 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PaddyGuard AI Research Team. All Rights Reserved.</div>
+        <div>SLIIT B.Sc. (Hons) Software Engineering</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <div id="search-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content search-modal-content">
+      <button class="modal-close-btn">✕</button>
+      <h3 style="font-size:1.25rem; margin-bottom:1rem;">Search Research Documentation</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="global-search-input" placeholder="Search domain, literature, objectives..." autocomplete="off">
+        <span id="search-results-count" style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">0 results</span>
+      </div>
+      <ul id="search-results-list" class="search-results-list"></ul>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Datasets Grid
+      const dsGrid = document.getElementById('datasets-cards-grid');
+      if (dsGrid && projectData.datasets) {
+        dsGrid.innerHTML = projectData.datasets.map(ds => `
+          <div class="card" style="display:flex; flex-direction:column;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
+              <span class="badge badge-info">${ds.component}</span>
+              <span class="badge ${ds.status.includes('In Use') ? 'badge-success' : 'badge-warning'}">${ds.status}</span>
+            </div>
+            <h4 style="font-size:1.15rem; color:var(--text-primary); margin-bottom:0.35rem;">${ds.name}</h4>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;"><strong>Source:</strong> ${ds.source}</div>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem; flex-grow:1;">${ds.purpose}</p>
+            <div style="font-size:0.8rem; color:var(--text-muted); background:var(--bg-tertiary); padding:0.75rem; border-radius:var(--radius-sm); margin-bottom:1rem;">
+              <strong>Target Scope:</strong> ${ds.classes}
+            </div>
+            ${ds.url ? `<a href="${ds.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="align-self:flex-start;">View Dataset Repository &rarr;</a>` : `<span style="font-size:0.75rem; color:var(--text-muted); font-style:italic;">Protected Research Collection</span>`}
+          </div>
+        `).join('');
+      }
+
+      // 2. References
+      const refList = document.getElementById('ref-list-items');
+      if (refList && projectData.references) {
+        refList.innerHTML = projectData.references.map(ref => `
+          <li style="margin-bottom:0.75rem;">
+            <strong>${ref.authors}</strong> (${ref.year}). <em>"${ref.title}"</em>. ${ref.publication}.
+            ${ref.link ? `<br><a href="${ref.link}" target="_blank" rel="noopener noreferrer" style="font-family:var(--font-mono); font-size:0.8rem; word-break:break-all;">${ref.link}</a>` : ''}
+          </li>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>

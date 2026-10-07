@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentations Library | PaddyGuard AI Research</title>
+  <meta name="description" content="Academic presentation slides library for PaddyGuard AI (R26-SE-015), including proposal defense, progress reviews, and final oral examination.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#059669" />
+          <path d="M18 46 C 18 28, 30 14, 46 16 C 44 32, 32 46, 18 46 Z" fill="#ffffff" />
+          <circle cx="24" cy="24" r="3.5" fill="#38bdf8" />
+          <circle cx="38" cy="28" r="3" fill="#38bdf8" />
+          <circle cx="32" cy="38" r="3" fill="#fbbf24" />
+        </svg>
+        <span class="logo-text">PaddyGuard <span style="color:var(--brand-emerald)">AI</span></span>
+        <span class="logo-badge">R26-SE-015</span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="domain.html" class="nav-link">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link active">Presentations</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="global-search-btn" class="search-trigger-btn" aria-label="Open Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn icon-btn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <span style="font-weight:800; color:var(--brand-emerald)">PaddyGuard AI</span>
+      <button id="drawer-close-btn" class="icon-btn">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="domain.html" class="mobile-nav-link">Domain &amp; Methodology</a></li>
+      <li><a href="milestones.html" class="mobile-nav-link">Milestones Tracker</a></li>
+      <li><a href="documents.html" class="mobile-nav-link">Documents Repository</a></li>
+      <li><a href="presentations.html" class="mobile-nav-link active">Presentations Deck</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Research Team</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Supervision</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content">
+    <section class="section page-header-section">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Academic Presentations Archive</span>
+        </nav>
+        <h1 class="page-title">Research Presentations Library</h1>
+        <p class="page-subtitle">
+          Formal defense slide decks, interim progress reviews, and viva voce presentations delivered before the academic evaluation board.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding: 2.5rem 0 4rem 0;">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-pills">
+            <button class="filter-pill pres-filter-btn active" data-filter="all">All Decks</button>
+            <button class="filter-pill pres-filter-btn" data-filter="completed">Completed Decks</button>
+            <button class="filter-pill pres-filter-btn" data-filter="upcoming">Upcoming Reviews</button>
+            <button class="filter-pill pres-filter-btn" data-filter="pending">Final Viva Deck</button>
+          </div>
+        </div>
+
+        <!-- Presentations Grid -->
+        <div class="grid grid-2" id="presentations-grid" style="gap:2rem;">
+          <!-- Populated via js/presentations.js -->
+        </div>
+
+        <div class="academic-notice" style="margin-top: 3rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div>
+            <strong>Defense Presentation Policy:</strong>
+            <p>
+              Presentation decks are uploaded immediately following their formal oral examination before the Department of Information Technology examination panel. Upcoming presentation dates remain pending scheduling confirmation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PaddyGuard <span style="color:var(--brand-emerald)">AI</span></h3>
+          <p>Undergraduate Research Project &bull; SLIIT Faculty of Computing</p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-top:0.5rem;">
+            Project ID: R26-SE-015
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Presentations</h4>
+          <ul class="footer-links">
+            <li><span>Proposal Defense</span></li>
+            <li><span>Progress Review 1</span></li>
+            <li><span>Progress Review 2</span></li>
+            <li><span>Final Viva Defense</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SLIIT Information</h4>
+          <ul class="footer-links">
+            <li><span>Supervisor: Dr. Nathali Silva</span></li>
+            <li><span>Dept. of Information Technology</span></li>
+            <li><span>March 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PaddyGuard AI Research Team. All Rights Reserved.</div>
+        <div>SLIIT B.Sc. (Hons) Software Engineering</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content search-modal-content">
+      <button class="modal-close-btn">✕</button>
+      <h3 style="font-size:1.25rem; margin-bottom:1rem;">Search Research Documentation</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="global-search-input" placeholder="Search presentations, slides, topics..." autocomplete="off">
+        <span id="search-results-count" style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">0 results</span>
+      </div>
+      <ul id="search-results-list" class="search-results-list"></ul>
+    </div>
+  </div>
+
+  <!-- Presentation Outline Modal -->
+  <div id="pres-outline-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="pres-modal-title">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close-btn">✕</button>
+      <h3 id="pres-modal-title" style="font-size:1.35rem; margin-bottom:1rem; color:var(--text-primary);">Presentation Agenda</h3>
+      <div id="pres-modal-body"></div>
+      <div style="margin-top:1.5rem; text-align:right;">
+        <button class="btn btn-secondary" onclick="closeModal('pres-outline-modal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Status Notice Modal -->
+  <div id="doc-notice-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content" style="max-width: 520px; text-align:center;">
+      <button class="modal-close-btn">✕</button>
+      <div style="font-size:3rem; margin-bottom:1rem;">📽️</div>
+      <h3 id="doc-notice-title" style="font-size:1.35rem; margin-bottom:0.5rem; color:var(--text-primary);">Slide Deck Notice</h3>
+      <div id="doc-notice-code" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-bottom:1rem;">R26-SE-015</div>
+      <p id="doc-notice-msg" style="font-size:0.925rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+        This presentation slide deck will be archived following completion of the oral examination.
+      </p>
+      <button class="btn btn-primary" onclick="closeModal('doc-notice-modal')">Understood</button>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/presentations.js"></script>
+</body>
+</html>

@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- SEO Meta Tags -->
+  <title>PaddyGuard AI | Multimodal AI Research for Rice Disease &amp; Pest Management</title>
+  <meta name="description" content="Academic research website for PaddyGuard AI (Project ID: R26-SE-015, SLIIT). A multimodal AI-based system for rice leaf disease &amp; pest detection, voice diagnosis, treatment recommendation and knowledge assistance.">
+  <meta name="keywords" content="PaddyGuard AI, Rice Disease Detection, Rice Pest Detection, Out of Distribution Detection, Voice Diagnosis, RAG Chatbot, Precision Agriculture, SLIIT">
+  <meta name="author" content="PaddyGuard AI Research Team">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" aria-label="PaddyGuard AI Homepage">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#059669" />
+          <path d="M18 46 C 18 28, 30 14, 46 16 C 44 32, 32 46, 18 46 Z" fill="#ffffff" />
+          <circle cx="24" cy="24" r="3.5" fill="#38bdf8" />
+          <circle cx="38" cy="28" r="3" fill="#38bdf8" />
+          <circle cx="32" cy="38" r="3" fill="#fbbf24" />
+        </svg>
+        <span class="logo-text">PaddyGuard <span style="color:var(--brand-emerald)">AI</span></span>
+        <span class="logo-badge">R26-SE-015</span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="domain.html" class="nav-link">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="global-search-btn" class="search-trigger-btn" aria-label="Open Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn icon-btn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <span style="font-weight:800; color:var(--brand-emerald)">PaddyGuard AI</span>
+      <button id="drawer-close-btn" class="icon-btn">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="domain.html" class="mobile-nav-link">Domain &amp; Methodology</a></li>
+      <li><a href="milestones.html" class="mobile-nav-link">Milestones Tracker</a></li>
+      <li><a href="documents.html" class="mobile-nav-link">Documents Repository</a></li>
+      <li><a href="presentations.html" class="mobile-nav-link">Presentations Deck</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Research Team</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Supervision</a></li>
+    </ul>
+    <div style="margin-top:auto; font-size:0.8rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:1rem;">
+      Project ID: R26-SE-015<br>SLIIT Faculty of Computing
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-meta-badge">
+            <span class="pulse-dot"></span>
+            <span>Academic Research Project &bull; SLIIT &bull; Project ID: R26-SE-015</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="gradient-text">PaddyGuard AI</span><br>
+            Multimodal Intelligence for Rice Disease &amp; Pest Management
+          </h1>
+          <p class="hero-lead">
+            An integrated research platform combining deep learning foliar disease classification, field pest detection, Sinhala voice-based symptom understanding, Out-of-Distribution (OOD) reliability screening, and knowledge-driven agricultural advisory.
+          </p>
+
+          <div class="hero-abstract-card">
+            <div class="hero-abstract-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>Research Abstract</span>
+            </div>
+            <p>
+              "Rice farmers face severe yield losses from foliar diseases and insect infestations while lacking accessible expert consultation. Standard agricultural AI classifiers operate under an unrealistic closed-world assumption—producing confident false predictions on unseen weeds, non-rice pests, or soil backgrounds. PaddyGuard AI addresses these limitations by uniting multimodal interaction (Sinhala voice + imagery) with open-set OOD reliability barriers and verified RAG agricultural decision support."
+            </p>
+          </div>
+
+          <div class="hero-actions">
+            <a href="domain.html" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Explore Domain &amp; Research
+            </a>
+            <a href="#four-components" class="btn btn-secondary">
+              View 4 Research Components
+            </a>
+            <a href="#interactive-lab" class="btn btn-outline">
+              Interactive Demonstrators
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Balanced 4-Quadrant Architecture Diagram -->
+        <div class="hero-visual-card">
+          <svg viewBox="0 0 460 380" fill="none" class="hero-visual-svg" aria-label="PaddyGuard AI Multimodal Ecosystem">
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ffffff" />
+                <stop offset="100%" stop-color="#f8fafc" />
+              </linearGradient>
+              <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="125%">
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.06"/>
+              </filter>
+            </defs>
+            <rect width="460" height="380" rx="16" fill="url(#bgGrad)" stroke="#e2e8f0" stroke-width="1.5" />
+
+            <!-- Connecting Cross Axis -->
+            <line x1="230" y1="30" x2="230" y2="350" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+            <line x1="30" y1="190" x2="430" y2="190" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+            <!-- Center Core Hub: Multimodal OOD Gateway -->
+            <circle cx="230" cy="190" r="44" fill="#ffffff" stroke="#059669" stroke-width="2.5" filter="url(#cardShadow)"/>
+            <text x="230" y="185" font-size="11" font-weight="800" fill="#0f172a" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif">PaddyGuard</text>
+            <text x="230" y="200" font-size="9" font-weight="700" fill="#0284c7" text-anchor="middle" font-family="'JetBrains Mono', monospace">OOD GATE</text>
+
+            <!-- Q1: Top Left - C1 Voice Diagnosis -->
+            <rect x="40" y="40" width="160" height="110" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <text x="55" y="65" font-size="18">🎙️</text>
+            <text x="80" y="65" font-size="12" font-weight="700" fill="#0284c7">Component 1</text>
+            <text x="55" y="85" font-size="11" font-weight="700" fill="#0f172a">Sinhala Voice NLP</text>
+            <text x="55" y="103" font-size="9" fill="#64748b">Whisper ASR &bull; BERT</text>
+            <text x="55" y="118" font-size="9" fill="#64748b">Sinhala TTS Feedback</text>
+            <text x="55" y="135" font-size="8.5" font-weight="700" fill="#0284c7">Equal Weight: 25%</text>
+
+            <!-- Q2: Top Right - C2 Leaf Disease -->
+            <rect x="260" y="40" width="160" height="110" rx="10" fill="#ffffff" stroke="#059669" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <text x="275" y="65" font-size="18">🌿</text>
+            <text x="300" y="65" font-size="12" font-weight="700" fill="#059669">Component 2</text>
+            <text x="275" y="85" font-size="11" font-weight="700" fill="#0f172a">Leaf Disease + OOD</text>
+            <text x="275" y="103" font-size="9" fill="#64748b">ResNet &bull; EfficientNet</text>
+            <text x="275" y="118" font-size="9" fill="#64748b">ODIN &bull; Grad-CAM Saliency</text>
+            <text x="275" y="135" font-size="8.5" font-weight="700" fill="#059669">Equal Weight: 25%</text>
+
+            <!-- Q3: Bottom Left - C4 Pest Detection -->
+            <rect x="40" y="230" width="160" height="110" rx="10" fill="#ffffff" stroke="#d97706" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <text x="55" y="255" font-size="18">🦗</text>
+            <text x="80" y="255" font-size="12" font-weight="700" fill="#d97706">Component 4</text>
+            <text x="55" y="275" font-size="11" font-weight="700" fill="#0f172a">Rice Pest Detection</text>
+            <text x="55" y="293" font-size="9" fill="#64748b">YOLOv8 &bull; Deep CNNs</text>
+            <text x="55" y="308" font-size="9" fill="#64748b">Unknown Insect OOD Rejection</text>
+            <text x="55" y="325" font-size="8.5" font-weight="700" fill="#d97706">Equal Weight: 25%</text>
+
+            <!-- Q4: Bottom Right - C3 Treatment Advisory -->
+            <rect x="260" y="230" width="160" height="110" rx="10" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" filter="url(#cardShadow)"/>
+            <text x="275" y="255" font-size="18">💊</text>
+            <text x="300" y="255" font-size="12" font-weight="700" fill="#7c3aed">Component 3</text>
+            <text x="275" y="275" font-size="11" font-weight="700" fill="#0f172a">Treatment &amp; Advisory</text>
+            <text x="275" y="293" font-size="9" fill="#64748b">RAG &bull; FAISS Vector DB</text>
+            <text x="275" y="308" font-size="9" fill="#64748b">Deterministic Rules &amp; Dosage</text>
+            <text x="275" y="325" font-size="8.5" font-weight="700" fill="#7c3aed">Equal Weight: 25%</text>
+          </svg>
+
+          <div style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
+            Unified Multimodal Architecture: Voice + Foliar Vision + Pest Vision + Verified Advisory
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS BANNER ==================== -->
+    <section class="stats-banner" aria-label="PaddyGuard AI System Pillars">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <div class="stat-val">4</div>
+          <div class="stat-label">Core AI Components</div>
+          <div class="stat-desc">25% Balanced Weighting Per Module</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">Multi</div>
+          <div class="stat-label">Modal Approach</div>
+          <div class="stat-desc">Sinhala Voice + Foliar + Pest Imagery</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">OOD</div>
+          <div class="stat-label">Open-Set Reliability</div>
+          <div class="stat-desc">ODIN, Mahalanobis &amp; OpenMax</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">RAG</div>
+          <div class="stat-label">Safe Advisory Engine</div>
+          <div class="stat-desc">IRRI Grounding + Deterministic Rules</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOUR CORE RESEARCH COMPONENTS (BALANCED) ==================== -->
+    <section class="section" id="four-components">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Academic Architecture</span>
+          <h2 class="section-title">Four Core Research Components</h2>
+          <p class="section-subtitle">
+            Equally weighted research modules addressing foliar diseases, field pests, low-literacy voice interaction, and verified chemical advisory
+          </p>
+        </div>
+
+        <div class="grid grid-2" style="gap:2rem;">
+
+          <!-- C1: Voice Diagnosis -->
+          <div class="component-card">
+            <span class="component-num">01</span>
+            <span class="badge badge-info component-badge">Speech &amp; NLP (25% Weight)</span>
+            <h3 class="component-title">Voice-Based Rice Disease Diagnosis</h3>
+            <div class="component-lead-by">Lead: Keshan B K (IT22303820)</div>
+            <p class="component-desc">
+              Allows smallholder farmers to verbally describe observed crop symptoms in Sinhala. Converts spoken speech into text (Whisper/Vosk), extracts clinical symptom keywords using TF-IDF, and classifies the foliar disease via BERT with synthesized Sinhala voice feedback.
+            </p>
+            <div class="component-tech-pills">
+              <span class="tech-pill">Whisper / Vosk</span>
+              <span class="tech-pill">TF-IDF</span>
+              <span class="tech-pill">BERT</span>
+              <span class="tech-pill">Sinhala TTS</span>
+              <span class="tech-pill">PyTorch</span>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+              <strong>Target Classes:</strong> Bacterial Blight, Leaf Blast, Brown Spot, Healthy
+            </div>
+            <a href="domain.html#voice-diagnosis" class="btn btn-outline btn-sm component-footer-btn">
+              View Voice Technical Scope &rarr;
+            </a>
+          </div>
+
+          <!-- C2: Leaf Disease + OOD -->
+          <div class="component-card">
+            <span class="component-num">02</span>
+            <span class="badge badge-success component-badge">Foliar Vision &amp; OOD (25% Weight)</span>
+            <h3 class="component-title">Rice Leaf Disease Classification + OOD</h3>
+            <div class="component-lead-by">Lead: Hewanayake H.M.L.M (IT22168740)</div>
+            <p class="component-desc">
+              Identifies foliar rice diseases from images using transfer learning CNNs (ResNet50, EfficientNetB3, DenseNet121). Implements Out-of-Distribution (OOD) screening via ODIN and OpenMax to reject non-rice leaves and soil, verified by Grad-CAM visual heatmaps.
+            </p>
+            <div class="component-tech-pills">
+              <span class="tech-pill">ResNet50</span>
+              <span class="tech-pill">EfficientNetB3</span>
+              <span class="tech-pill">DenseNet121</span>
+              <span class="tech-pill">ODIN / OpenMax</span>
+              <span class="tech-pill">Grad-CAM</span>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+              <strong>Target Classes:</strong> Bacterial Blight, Leaf Blast, Brown Spot, Healthy Leaf
+            </div>
+            <a href="domain.html#disease-classification" class="btn btn-outline btn-sm component-footer-btn">
+              View Disease Technical Scope &rarr;
+            </a>
+          </div>
+
+          <!-- C4: Pest Detection + OOD -->
+          <div class="component-card">
+            <span class="component-num">04</span>
+            <span class="badge badge-warning component-badge">Pest Vision &amp; OOD (25% Weight)</span>
+            <h3 class="component-title">Rice Pest Detection + OOD</h3>
+            <div class="component-lead-by">Lead: Kalhara E P K (IT22065858)</div>
+            <p class="component-desc">
+              Detects and localizes common destructive rice insect pests from field imagery using deep learning (YOLOv8 &amp; CNNs). Deploys OOD screening to identify and reject unfamiliar non-rice insects, preventing unnecessary agrochemical spraying.
+            </p>
+            <div class="component-tech-pills">
+              <span class="tech-pill">YOLOv8</span>
+              <span class="tech-pill">ResNet50</span>
+              <span class="tech-pill">EfficientNet</span>
+              <span class="tech-pill">OOD Filtering</span>
+              <span class="tech-pill">OpenCV</span>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+              <strong>Target Species:</strong> Brown Planthopper, Stem Borer, Leaf Folder, Gall Midge
+            </div>
+            <a href="domain.html#pest-detection" class="btn btn-outline btn-sm component-footer-btn">
+              View Pest Technical Scope &rarr;
+            </a>
+          </div>
+
+          <!-- C3: Treatment Advisory & Chatbot -->
+          <div class="component-card">
+            <span class="component-num">03</span>
+            <span class="badge badge-purple component-badge">RAG &amp; Expert Engine (25% Weight)</span>
+            <h3 class="component-title">Treatment Advisory &amp; RAG Chatbot</h3>
+            <div class="component-lead-by">Lead: Weerasinghe KGJP (IT22273680)</div>
+            <p class="component-desc">
+              A dual-layered decision support system combining Retrieval-Augmented Generation (RAG) over verified IRRI &amp; FAO literature with deterministic expert rules and a land acreage dosage calculator to prevent pesticide hallucinations.
+            </p>
+            <div class="component-tech-pills">
+              <span class="tech-pill">RAG Pipeline</span>
+              <span class="tech-pill">FAISS Vector DB</span>
+              <span class="tech-pill">LLM Ingestion</span>
+              <span class="tech-pill">Expert Rules</span>
+              <span class="tech-pill">Dosage Engine</span>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">
+              <strong>Scope:</strong> Chemical &amp; biological recommendations + calibrated sprayer measurements
+            </div>
+            <a href="domain.html#treatment-advisory" class="btn btn-outline btn-sm component-footer-btn">
+              View Treatment Technical Scope &rarr;
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOUR INTERACTIVE RESEARCH DEMONSTRATORS ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="interactive-lab">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Interactive Demonstrators</span>
+          <h2 class="section-title">Research Laboratory Demonstrators</h2>
+          <p class="section-subtitle">
+            Hands-on prototypes showcasing each of the 4 intelligent components
+          </p>
+        </div>
+
+        <!-- DEMO 1: VOICE DIAGNOSIS SIMULATOR (C1) -->
+        <div class="sim-widget">
+          <div class="sim-header">
+            <h3 class="sim-title">
+              <span>🎙️</span> Demonstrator 1: Sinhala Voice-Based Symptom Diagnosis (Component 1)
+            </h3>
+            <span class="badge badge-info">Whisper ASR &bull; TF-IDF &bull; BERT</span>
+          </div>
+
+          <p style="font-size:0.925rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+            Select a natural spoken Sinhala farmer audio sample to simulate automatic speech recognition, symptom keyword parsing, and disease prediction:
+          </p>
+
+          <div class="voice-sample-btn-group">
+            <button class="btn btn-secondary btn-sm voice-sample-btn active" data-sample="blast">
+              Sample 1: "Brown spindle lesions with grey centers" (Leaf Blast)
+            </button>
+            <button class="btn btn-secondary btn-sm voice-sample-btn" data-sample="blight">
+              Sample 2: "Yellowing leaf tips drying in wavy stripes" (Bacterial Blight)
+            </button>
+            <button class="btn btn-secondary btn-sm voice-sample-btn" data-sample="brownspot">
+              Sample 3: "Multiple small circular dark spots" (Brown Spot)
+            </button>
+          </div>
+
+          <div class="voice-sim-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+              <span id="voice-sim-status" style="font-size:0.85rem; font-weight:700; color:var(--brand-emerald-dark);">
+                ✅ Whisper ASR &amp; TF-IDF Extraction Complete
+              </span>
+              <button id="voice-play-tts-btn" class="btn btn-primary btn-sm">
+                🔊 Play Synthesized Sinhala Audio (TTS)
+              </button>
+            </div>
+
+            <div class="audio-waveform-canvas">
+              <span class="waveform-bar"></span><span class="waveform-bar"></span><span class="waveform-bar"></span>
+              <span class="waveform-bar"></span><span class="waveform-bar"></span><span class="waveform-bar"></span>
+              <span class="waveform-bar"></span><span class="waveform-bar"></span><span class="waveform-bar"></span>
+              <span class="waveform-bar"></span><span class="waveform-bar"></span><span class="waveform-bar"></span>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1rem;">
+              <div>
+                <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; margin-bottom:0.25rem;">Spoken Sinhala Transcript</div>
+                <div id="voice-transcript-text" style="font-size:0.95rem; font-weight:600; color:var(--text-primary); background:var(--bg-card); padding:0.85rem; border-radius:var(--radius-sm); border:1px solid var(--border-color);">
+                  "ගොයම් කොළවල දුඹුරු පාට ලප හැදිලා, මැද අළු පාට වෙලා තියෙනවා (Spindle brown lesions with grey centers on leaves)"
+                </div>
+              </div>
+              <div>
+                <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; margin-bottom:0.25rem;">Extracted Symptoms (TF-IDF &bull; NLP)</div>
+                <div id="voice-entities-text" style="font-size:0.9rem; color:var(--brand-forest); background:var(--bg-card); padding:0.85rem; border-radius:var(--radius-sm); border:1px solid var(--border-color); font-weight:600;">
+                  දුඹුරු පාට ලප (Brown lesions) &bull; මැද අළු පාට (Grey center) &bull; ගොයම් කොළ (Rice leaves)
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.25rem; padding-top:1rem; border-top:1px solid var(--border-color); flex-wrap:wrap; gap:0.5rem;">
+              <div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Predicted Condition:</span>
+                <strong id="voice-predicted-disease" style="font-size:1.05rem; color:var(--text-primary); margin-left:0.5rem;">Leaf Blast (Magnaporthe oryzae)</strong>
+              </div>
+              <div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Model Confidence:</span>
+                <span id="voice-confidence-score" class="badge badge-success" style="margin-left:0.5rem;">94.2% (High Confidence)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO 2: RICE PEST DETECTION & UNKNOWN INSECT OOD GATE (C4) -->
+        <div class="sim-widget">
+          <div class="sim-header">
+            <h3 class="sim-title">
+              <span>🦗</span> Demonstrator 2: Rice Pest Detection &amp; Unknown Insect OOD Gate (Component 4)
+            </h3>
+            <span class="badge badge-warning">YOLOv8 &bull; OOD Screening</span>
+          </div>
+
+          <p style="font-size:0.925rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+            Test how YOLOv8 localizes paddy insect pests and observe how the Out-of-Distribution (OOD) barrier rejects non-target insects (e.g. beneficial ladybugs) to avoid false spraying:
+          </p>
+
+          <div class="gradcam-grid">
+            <div>
+              <div class="leaf-view-card">
+                <svg id="pest-image-svg" class="leaf-svg-render" viewBox="0 0 380 280">
+                  <!-- Populated via initPestVisualizer -->
+                </svg>
+              </div>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem; text-align:center;">
+                YOLOv8 Bounding Bounding Box &amp; Feature Distance Inspection
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-input-group">
+                <label for="pest-sample-select">Select Test Pest Image:</label>
+                <select id="pest-sample-select" class="calc-input">
+                  <option value="bph">Pest 1: Brown Planthopper (Nilaparvata lugens)</option>
+                  <option value="stemborer">Pest 2: Rice Stem Borer (Scirpophaga incertulas)</option>
+                  <option value="leaffolder">Pest 3: Rice Leaf Folder (Cnaphalocrocis medinalis)</option>
+                  <option value="gallmidge">Pest 4: Rice Gall Midge (Orseolia oryzae)</option>
+                  <option value="ood-bug">Pest 5: Non-Rice Insect / Beneficial Ladybug (OOD Probe)</option>
+                </select>
+              </div>
+
+              <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <div style="margin-bottom:0.75rem;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Detection Classification</span>
+                  <div id="pest-pred-label" style="font-size:1.15rem; font-weight:800; color:var(--text-primary);">
+                    Brown Planthopper (Nilaparvata lugens)
+                  </div>
+                </div>
+
+                <div style="margin-bottom:0.75rem; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Detection Confidence:</span>
+                  <strong id="pest-pred-conf" style="font-family:var(--font-mono); color:var(--brand-emerald-dark);">95.2%</strong>
+                </div>
+
+                <div style="margin-bottom:0.75rem;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; display:block; margin-bottom:0.35rem;">OOD Reliability Barrier</span>
+                  <span id="pest-ood-status" class="badge badge-success">In-Distribution Paddy Pest (Accepted)</span>
+                </div>
+
+                <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5; border-top:1px solid var(--border-color); padding-top:0.75rem;">
+                  <strong>Pathology &amp; Agronomic Note:</strong> <span id="pest-action-note">YOLOv8 detected cluster of small brown planthoppers near stem base. Critical Hopperburn risk.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO 3: LEAF DISEASE GRAD-CAM & OOD (C2) -->
+        <div class="sim-widget">
+          <div class="sim-header">
+            <h3 class="sim-title">
+              <span>🌿</span> Demonstrator 3: Rice Leaf Disease Classification &amp; Grad-CAM (Component 2)
+            </h3>
+            <span class="badge badge-success">ResNet / EfficientNet &bull; Grad-CAM</span>
+          </div>
+
+          <div class="gradcam-grid">
+            <div>
+              <div class="leaf-view-card">
+                <svg id="disease-leaf-svg" class="leaf-svg-render" viewBox="0 0 380 280">
+                  <!-- Injected via initDiseaseVisualizer -->
+                </svg>
+                <div id="disease-heatmap-layer" class="heatmap-overlay"></div>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.75rem;">
+                <label style="font-size:0.85rem; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:0.4rem;">
+                  <input type="checkbox" id="disease-toggle-heatmap" checked>
+                  <span>Overlay Grad-CAM Saliency Heatmap</span>
+                </label>
+                <span style="font-size:0.75rem; color:var(--text-muted);">Red = Salient Lesion</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-input-group">
+                <label for="disease-sample-select">Select Test Leaf Image:</label>
+                <select id="disease-sample-select" class="calc-input">
+                  <option value="blast">Leaf 1: Rice Leaf Blast (In-Distribution)</option>
+                  <option value="blight">Leaf 2: Bacterial Leaf Blight (In-Distribution)</option>
+                  <option value="brownspot">Leaf 3: Rice Brown Spot (In-Distribution)</option>
+                  <option value="healthy">Leaf 4: Healthy Rice Leaf (In-Distribution)</option>
+                  <option value="ood-weed">Leaf 5: Non-Rice Weed / Mango Leaf (OOD Probe)</option>
+                </select>
+              </div>
+
+              <div style="background:var(--bg-tertiary); padding:1.25rem; border-radius:var(--radius-md); border:1px solid var(--border-color);">
+                <div style="margin-bottom:0.75rem;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Disease Prediction</span>
+                  <div id="disease-pred-label" style="font-size:1.15rem; font-weight:800; color:var(--text-primary);">
+                    Leaf Blast (Magnaporthe oryzae)
+                  </div>
+                </div>
+
+                <div style="margin-bottom:0.75rem; display:flex; align-items:center; justify-content:space-between;">
+                  <span style="font-size:0.85rem; color:var(--text-muted);">Softmax Confidence:</span>
+                  <strong id="disease-pred-conf" style="font-family:var(--font-mono); color:var(--brand-emerald-dark);">94.6%</strong>
+                </div>
+
+                <div style="margin-bottom:0.75rem;">
+                  <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700; display:block; margin-bottom:0.35rem;">OOD Reliability Status</span>
+                  <span id="disease-ood-status" class="badge badge-success">In-Distribution (Score 0.96 > Threshold)</span>
+                </div>
+
+                <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5; border-top:1px solid var(--border-color); padding-top:0.75rem;">
+                  <strong>Grad-CAM Review:</strong> <span id="disease-explain-note">Grad-CAM verifies high convolutional attention focused directly over the spindle necrotic eye-spots.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEMO 4: TREATMENT ADVISORY & DOSAGE ENGINE (C3) -->
+        <div class="sim-widget">
+          <div class="sim-header">
+            <h3 class="sim-title">
+              <span>💊</span> Demonstrator 4: Treatment Advisory RAG &amp; Safe Dosage Calculator (Component 3)
+            </h3>
+            <span class="badge badge-purple">RAG Vector Base &bull; Expert Rule Barrier</span>
+          </div>
+
+          <div class="academic-notice warning">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <div>
+              <strong>Academic Demonstration Notice:</strong>
+              <p>Values shown below are illustrative prototype calculations for engineering evaluation. They do not constitute official agronomic recommendations for live field application.</p>
+            </div>
+          </div>
+
+          <div class="dosage-calc-grid">
+            <div>
+              <div class="calc-input-group">
+                <label for="advisory-acres-input">Paddy Extent (Acres):</label>
+                <input type="number" id="advisory-acres-input" class="calc-input" value="1.5" min="0.25" max="20" step="0.25">
+              </div>
+
+              <div class="calc-input-group">
+                <label for="advisory-target-select">Diagnosed Condition (from C1, C2, or C4):</label>
+                <select id="advisory-target-select" class="calc-input">
+                  <option value="blast">Leaf Blast (Magnaporthe oryzae) - Fungal</option>
+                  <option value="blight">Bacterial Leaf Blight (Xanthomonas oryzae) - Bacterial</option>
+                  <option value="bph">Brown Planthopper (Nilaparvata lugens) - Insect Pest</option>
+                  <option value="stemborer">Rice Stem Borer (Scirpophaga incertulas) - Insect Pest</option>
+                </select>
+              </div>
+
+              <button id="advisory-calc-btn" class="btn btn-primary" style="width:100%;">
+                Compute Calibrated Application Rate
+              </button>
+            </div>
+
+            <div class="calc-result-card">
+              <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Calculated Spray Volume</span>
+              <div id="advisory-water-vol" class="calc-highlight-number">240 Liters</div>
+              <div id="advisory-tank-count" style="font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-bottom:0.75rem;">15 Tanks (16L each)</div>
+
+              <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.25rem;">Active Chemical Requirement:</div>
+              <div id="advisory-chem-amount" style="font-size:1.05rem; font-weight:700; color:var(--brand-forest); margin-bottom:0.75rem;">
+                Isoprothiolane 40% EC: 450 mL total (~30 mL per tank)
+              </div>
+
+              <div id="advisory-rag-snippet" style="font-size:0.8rem; color:var(--text-secondary); background:var(--bg-secondary); padding:0.65rem; border-radius:var(--radius-sm); margin-bottom:0.75rem; border-left:3px solid var(--brand-purple);">
+                <strong>Source:</strong> <em>IRRI Rice Knowledge Bank</em><br>
+                "Chemical treatment must be integrated with nitrogen restriction."
+              </div>
+
+              <div style="font-size:0.8rem; color:var(--text-secondary); background:var(--bg-secondary); padding:0.65rem; border-radius:var(--radius-sm); border-left:3px solid var(--brand-emerald);">
+                <strong>IPM Directive:</strong> <span id="advisory-ipm-note">Drain stagnant paddy water for 3-4 days to arrest sporulation.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PaddyGuard <span style="color:var(--brand-emerald)">AI</span></h3>
+          <p>Undergraduate Research Project &bull; SLIIT Faculty of Computing</p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-top:0.5rem;">
+            Project ID: R26-SE-015
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Core AI Modules</h4>
+          <ul class="footer-links">
+            <li><a href="domain.html#voice-diagnosis">C1: Voice Diagnosis (25%)</a></li>
+            <li><a href="domain.html#disease-classification">C2: Leaf Disease CV (25%)</a></li>
+            <li><a href="domain.html#pest-detection">C4: Pest Detection CV (25%)</a></li>
+            <li><a href="domain.html#treatment-advisory">C3: Treatment Advisory (25%)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SLIIT Affiliation</h4>
+          <ul class="footer-links">
+            <li><span>Supervisor: Dr. Nathali Silva</span></li>
+            <li><span>Dept. of Information Technology</span></li>
+            <li><span>March 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PaddyGuard AI Research Team. All Rights Reserved.</div>
+        <div>SLIIT B.Sc. (Hons) Software Engineering</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content search-modal-content">
+      <button class="modal-close-btn">✕</button>
+      <h3 style="font-size:1.25rem; margin-bottom:1rem;">Search Research Documentation</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="global-search-input" placeholder="Search components, pests, diseases, voice, milestones..." autocomplete="off">
+        <span id="search-results-count" style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">0 results</span>
+      </div>
+      <ul id="search-results-list" class="search-results-list"></ul>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 920" width="100%" height="100%" class="arch-svg-root">
+  <defs>
+    <linearGradient id="clientGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ecfdf5" />
+      <stop offset="100%" stop-color="#d1fae5" />
+    </linearGradient>
+    <linearGradient id="gatewayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+    <linearGradient id="serviceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf5ff" />
+      <stop offset="100%" stop-color="#f3e8ff" />
+    </linearGradient>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb" />
+      <stop offset="100%" stop-color="#fef3c7" />
+    </linearGradient>
+    <linearGradient id="outputGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0fdf4" />
+      <stop offset="100%" stop-color="#dcfce7" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.08" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#059669" />
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#0284c7" />
+    </marker>
+    <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#7c3aed" />
+    </marker>
+  </defs>
+
+  <style>
+    .arch-svg-root text { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .layer-box { rx: 12px; stroke-width: 1.5; }
+    .layer-title { font-weight: 800; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+    .node-card { cursor: pointer; transition: transform 0.2s, stroke 0.2s; rx: 8px; }
+    .node-card:hover { filter: drop-shadow(0 6px 12px rgba(16,185,129,0.25)); stroke-width: 2px !important; }
+    .node-title { font-weight: 700; font-size: 12px; fill: #0f172a; }
+    .node-sub { font-size: 10px; fill: #475569; }
+    .conn-line { stroke-width: 1.8; fill: none; }
+    .badge { font-size: 9px; font-weight: 700; text-transform: uppercase; rx: 4px; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1200" height="920" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- Top Title Header -->
+  <text x="40" y="36" font-size="20" font-weight="800" fill="#064e3b">PaddyGuard AI — System Architecture &amp; Data Pipeline</text>
+  <text x="40" y="56" font-size="12" fill="#64748b">Multimodal Intelligent System for Rice Leaf Disease &amp; Pest Management | Project ID: R26-SE-015</text>
+
+  <!-- ==================== 1. CLIENT LAYER ==================== -->
+  <g id="layer-client" class="arch-layer" transform="translate(40, 75)">
+    <rect width="1120" height="95" class="layer-box" fill="url(#clientGrad)" stroke="#10b981" />
+    <text x="16" y="24" class="layer-title" fill="#065f46">1. Client Layer (Farmer &amp; Field Device)</text>
+
+    <!-- Farmer Actor -->
+    <g class="node-card" data-node="farmer-actor" transform="translate(30, 32)">
+      <rect width="130" height="50" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" filter="url(#cardShadow)"/>
+      <circle cx="28" cy="25" r="12" fill="#d1fae5"/>
+      <path d="M 28 17 A 5 5 0 1 0 28 27 A 5 5 0 1 0 28 17 Z M 21 34 C 21 30 24 28 28 28 C 32 28 35 30 35 34" fill="#059669"/>
+      <text x="48" y="22" class="node-title">Rice Farmer</text>
+      <text x="48" y="36" class="node-sub">Sinhala / Low-literacy</text>
+    </g>
+
+    <!-- Mobile Browser -->
+    <g class="node-card" data-node="mobile-browser" transform="translate(200, 32)">
+      <rect width="180" height="50" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="14" y="22" class="node-title">Mobile Web Application</text>
+      <text x="14" y="36" class="node-sub">Progressive Web App (Responsive)</text>
+    </g>
+
+    <!-- Desktop Browser -->
+    <g class="node-card" data-node="desktop-browser" transform="translate(410, 32)">
+      <rect width="170" height="50" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="14" y="22" class="node-title">Desktop Browser</text>
+      <text x="14" y="36" class="node-sub">Extension Officer Portal</text>
+    </g>
+
+    <!-- UI Multimodal Inputs -->
+    <g class="node-card" data-node="client-inputs" transform="translate(610, 32)">
+      <rect width="480" height="50" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="16" y="20" class="node-title" fill="#047857">Multimodal Interaction Interface</text>
+      <text x="16" y="36" class="node-sub">🎙️ Sinhala Voice Mic | 📷 Leaf &amp; Pest Image Capture | 💬 RAG Chatbot Query</text>
+    </g>
+  </g>
+
+  <!-- Connectors Client -> Gateway -->
+  <path d="M 600 170 L 600 195" class="conn-line" stroke="#059669" marker-end="url(#arrow)" />
+  <text x="610" y="185" font-size="10" fill="#047857" font-weight="600">HTTPS / TLS 1.3 Request</text>
+
+  <!-- ==================== 2. API GATEWAY LAYER ==================== -->
+  <g id="layer-gateway" class="arch-layer" transform="translate(40, 195)">
+    <rect width="1120" height="85" class="layer-box" fill="url(#gatewayGrad)" stroke="#0284c7" />
+    <text x="16" y="22" class="layer-title" fill="#0369a1">2. API Gateway &amp; Intelligent Routing Layer</text>
+
+    <!-- Gateway Router -->
+    <g class="node-card" data-node="api-gateway" transform="translate(30, 28)">
+      <rect width="320" height="46" rx="8" fill="#ffffff" stroke="#7dd3fc" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="14" y="20" class="node-title">FastAPI Central Gateway</text>
+      <text x="14" y="34" class="node-sub">Python • TLS 1.3 • Docker Container</text>
+    </g>
+
+    <!-- Request Router -->
+    <g class="node-card" data-node="request-router" transform="translate(380, 28)">
+      <rect width="360" height="46" rx="8" fill="#ffffff" stroke="#7dd3fc" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="14" y="19" class="node-title">Multimodal Request Router</text>
+      <text x="14" y="33" class="node-sub">Voice → C1 | Leaf Img → C2 | Pest Img → C3 | Chat → C4</text>
+    </g>
+
+    <!-- Confidence Router -->
+    <g class="node-card" data-node="confidence-router" transform="translate(770, 28)">
+      <rect width="320" height="46" rx="8" fill="#ffffff" stroke="#38bdf8" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <text x="14" y="19" class="node-title" fill="#0284c7">Confidence Router &amp; OOD Gate</text>
+      <text x="14" y="33" class="node-sub">Confidence ≥ 0.70 → C4 Advisory | &lt; 0.70 → Ask Follow-up</text>
+    </g>
+  </g>
+
+  <!-- Connectors Gateway -> Microservices -->
+  <path d="M 160 280 L 160 315" class="conn-line" stroke="#7c3aed" marker-end="url(#arrowPurple)" />
+  <path d="M 400 280 L 400 315" class="conn-line" stroke="#7c3aed" marker-end="url(#arrowPurple)" />
+  <path d="M 640 280 L 640 315" class="conn-line" stroke="#7c3aed" marker-end="url(#arrowPurple)" />
+  <path d="M 880 280 L 880 315" class="conn-line" stroke="#7c3aed" marker-end="url(#arrowPurple)" />
+  <path d="M 1040 280 L 1040 315" class="conn-line" stroke="#7c3aed" marker-end="url(#arrowPurple)" />
+
+  <!-- ==================== 3. AI SERVICES LAYER (MICROSERVICES) ==================== -->
+  <g id="layer-services" class="arch-layer" transform="translate(40, 315)">
+    <rect width="1120" height="260" class="layer-box" fill="url(#serviceGrad)" stroke="#7c3aed" />
+    <text x="16" y="24" class="layer-title" fill="#6d28d9">3. AI Services Layer — Containerized Microservices (Docker + Kubernetes)</text>
+
+    <!-- C1 Voice NLP -->
+    <g class="node-card" data-node="c1-voice" transform="translate(20, 36)">
+      <rect width="210" height="205" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="210" height="26" rx="8" fill="#ede9fe" />
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#6d28d9">C1: Voice NLP Service</text>
+      <text x="10" y="44" font-size="10" font-weight="600" fill="#1e293b">• Sinhala Voice Input (16kHz)</text>
+      <text x="10" y="60" font-size="9" fill="#475569">  Whisper / Vosk ASR STT</text>
+      <text x="10" y="76" font-size="10" font-weight="600" fill="#1e293b">• Symptom Extraction</text>
+      <text x="10" y="92" font-size="9" fill="#475569">  TF-IDF Keyword Normalization</text>
+      <text x="10" y="108" font-size="10" font-weight="600" fill="#1e293b">• NLP Classification</text>
+      <text x="10" y="124" font-size="9" fill="#475569">  BERT / RoBERTa / Naive Bayes</text>
+      <text x="10" y="140" font-size="10" font-weight="600" fill="#b91c1c">• OOD Rejection Check</text>
+      <text x="10" y="156" font-size="9" fill="#475569">  Threshold &gt;= 0.70 or Clarify</text>
+      <text x="10" y="172" font-size="10" font-weight="600" fill="#1e293b">• Sinhala TTS Response</text>
+      <text x="10" y="188" font-size="9" fill="#475569">  Speech Synthesis for Low-literacy</text>
+    </g>
+
+    <!-- C2 Leaf Disease -->
+    <g class="node-card" data-node="c2-disease" transform="translate(245, 36)">
+      <rect width="220" height="205" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="220" height="26" rx="8" fill="#ede9fe" />
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#6d28d9">C2: Leaf Disease + OOD</text>
+      <text x="10" y="44" font-size="10" font-weight="600" fill="#1e293b">• Image Preprocessing</text>
+      <text x="10" y="60" font-size="9" fill="#475569">  Resize 224x224, Norm, Augment</text>
+      <text x="10" y="76" font-size="10" font-weight="600" fill="#1e293b">• CNN Feature Backbone</text>
+      <text x="10" y="92" font-size="9" fill="#475569">  ResNet50 / EfficientNetB3 / DenseNet121</text>
+      <text x="10" y="108" font-size="10" font-weight="600" fill="#b91c1c">• OOD Detection Layer</text>
+      <text x="10" y="124" font-size="9" fill="#b91c1c">  ODIN / Mahalanobis / OpenMax</text>
+      <text x="10" y="140" font-size="10" font-weight="600" fill="#1e293b">• 4 Classes: Blight, Blast,</text>
+      <text x="10" y="154" font-size="9" fill="#475569">  Brown Spot, Healthy</text>
+      <text x="10" y="170" font-size="10" font-weight="600" fill="#047857">• Grad-CAM Explainability</text>
+      <text x="10" y="186" font-size="9" fill="#047857">  Salient Lesion Heatmap Overlay</text>
+    </g>
+
+    <!-- C3 Pest Detection -->
+    <g class="node-card" data-node="c3-pest" transform="translate(480, 36)">
+      <rect width="210" height="205" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="210" height="26" rx="8" fill="#ede9fe" />
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#6d28d9">C3: Rice Pest + OOD</text>
+      <text x="10" y="44" font-size="10" font-weight="600" fill="#1e293b">• Pest Image Input</text>
+      <text x="10" y="60" font-size="9" fill="#475569">  Field images, complex foliage</text>
+      <text x="10" y="76" font-size="10" font-weight="600" fill="#1e293b">• Deep Detection / CNN</text>
+      <text x="10" y="92" font-size="9" fill="#475569">  YOLOv8 / ResNet / EfficientNet</text>
+      <text x="10" y="108" font-size="10" font-weight="600" fill="#b91c1c">• Unknown Insect OOD Gate</text>
+      <text x="10" y="124" font-size="9" fill="#b91c1c">  Rejects non-rice pests</text>
+      <text x="10" y="140" font-size="10" font-weight="600" fill="#1e293b">• Target Rice Pest Species</text>
+      <text x="10" y="156" font-size="9" fill="#475569">  BPH, Stem Borer, Leaf Folder,</text>
+      <text x="10" y="170" font-size="9" fill="#475569">  Whorl Maggot, Gall Midge</text>
+      <text x="10" y="186" font-size="10" font-weight="600" fill="#1e293b">• Confidence Score Output</text>
+    </g>
+
+    <!-- C4 Treatment Advisory & Chatbot -->
+    <g class="node-card" data-node="c4-advisory" transform="translate(705, 36)">
+      <rect width="220" height="205" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="220" height="26" rx="8" fill="#ede9fe" />
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#6d28d9">C4: Treatment &amp; RAG Chatbot</text>
+      <text x="10" y="44" font-size="10" font-weight="600" fill="#1e293b">• Multimodal Diagnostic Input</text>
+      <text x="10" y="60" font-size="9" fill="#475569">  Disease + Pest + Confidence</text>
+      <text x="10" y="76" font-size="10" font-weight="600" fill="#1e293b">• Semantic Vector Search</text>
+      <text x="10" y="92" font-size="9" fill="#475569">  FAISS / ChromaDB Embeddings</text>
+      <text x="10" y="108" font-size="10" font-weight="600" fill="#1e293b">• RAG Retrieval Pipeline</text>
+      <text x="10" y="124" font-size="9" fill="#475569">  IRRI + FAO + DOA Knowledge</text>
+      <text x="10" y="140" font-size="10" font-weight="600" fill="#047857">• Rule-Based Expert Engine</text>
+      <text x="10" y="156" font-size="9" fill="#047857">  Strict validation of pesticides</text>
+      <text x="10" y="172" font-size="10" font-weight="600" fill="#d97706">• Safe Dosage Calculator</text>
+      <text x="10" y="188" font-size="9" fill="#d97706">  Acreage/tank calibrated guidance</text>
+    </g>
+
+    <!-- User Management -->
+    <g class="node-card" data-node="user-mgmt" transform="translate(940, 36)">
+      <rect width="160" height="205" rx="8" fill="#ffffff" stroke="#c4b5fd" stroke-width="1.2" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="160" height="26" rx="8" fill="#ede9fe" />
+      <text x="10" y="17" font-size="11" font-weight="700" fill="#6d28d9">User &amp; Auth Service</text>
+      <text x="10" y="44" font-size="10" font-weight="600" fill="#1e293b">• JWT Token Issuance</text>
+      <text x="10" y="60" font-size="9" fill="#475569">  Secure session state</text>
+      <text x="10" y="76" font-size="10" font-weight="600" fill="#1e293b">• Farmer Profile</text>
+      <text x="10" y="92" font-size="9" fill="#475569">  District, acreage, language</text>
+      <text x="10" y="108" font-size="10" font-weight="600" fill="#1e293b">• Diagnosis History</text>
+      <text x="10" y="124" font-size="9" fill="#475569">  Timestamped field records</text>
+      <text x="10" y="140" font-size="10" font-weight="600" fill="#1e293b">• Feedback &amp; Audit Logs</text>
+      <text x="10" y="156" font-size="9" fill="#475569">  Traceability &amp; compliance</text>
+    </g>
+  </g>
+
+  <!-- Connectors AI Services -> DB Layer -->
+  <path d="M 600 575 L 600 605" class="conn-line" stroke="#d97706" marker-end="url(#arrow)" />
+
+  <!-- ==================== 4. DATABASE & KNOWLEDGE LAYER ==================== -->
+  <g id="layer-database" class="arch-layer" transform="translate(40, 605)">
+    <rect width="1120" height="150" class="layer-box" fill="url(#dbGrad)" stroke="#f59e0b" />
+    <text x="16" y="22" class="layer-title" fill="#b45309">4. Database &amp; Knowledge Repositories Layer</text>
+
+    <!-- DB Cards Grid -->
+    <g class="node-card" data-node="db-symptom" transform="translate(20, 34)">
+      <rect width="150" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB1: Symptom Corpus</text>
+      <text x="10" y="32" class="node-sub">MongoDB • Sinhala terms</text>
+    </g>
+
+    <g class="node-card" data-node="db-disease-img" transform="translate(185, 34)">
+      <rect width="160" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB2: Disease Image Store</text>
+      <text x="10" y="32" class="node-sub">AWS S3 • Kaggle / Field</text>
+    </g>
+
+    <g class="node-card" data-node="db-disease-preds" transform="translate(360, 34)">
+      <rect width="165" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB3: Disease Predictions</text>
+      <text x="10" y="32" class="node-sub">PostgreSQL • Anonymized</text>
+    </g>
+
+    <g class="node-card" data-node="db-pest-img" transform="translate(540, 34)">
+      <rect width="155" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB4: Pest Image Store</text>
+      <text x="10" y="32" class="node-sub">AWS S3 • IP02 / Field</text>
+    </g>
+
+    <g class="node-card" data-node="db-pest-preds" transform="translate(710, 34)">
+      <rect width="165" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB5: Pest Detection Log</text>
+      <text x="10" y="32" class="node-sub">PostgreSQL • Audit log</text>
+    </g>
+
+    <g class="node-card" data-node="db-knowledge" transform="translate(890, 34)">
+      <rect width="210" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB6: Agri Knowledge Base</text>
+      <text x="10" y="32" class="node-sub">IRRI / FAO / DOA Documents</text>
+    </g>
+
+    <!-- Row 2 Databases -->
+    <g class="node-card" data-node="db-vector" transform="translate(20, 90)">
+      <rect width="180" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB7: Vector Database</text>
+      <text x="10" y="32" class="node-sub">FAISS / ChromaDB Index</text>
+    </g>
+
+    <g class="node-card" data-node="db-treatment" transform="translate(215, 90)">
+      <rect width="180" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB8: Treatment Rules</text>
+      <text x="10" y="32" class="node-sub">PostgreSQL • Agronomist Verified</text>
+    </g>
+
+    <g class="node-card" data-node="db-session" transform="translate(410, 90)">
+      <rect width="180" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB9: Farmer Session</text>
+      <text x="10" y="32" class="node-sub">Redis • Encrypted Ephemeral</text>
+    </g>
+
+    <g class="node-card" data-node="db-profile" transform="translate(605, 90)">
+      <rect width="165" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB10: Farmer Profile</text>
+      <text x="10" y="32" class="node-sub">PostgreSQL • Privacy Guarded</text>
+    </g>
+
+    <g class="node-card" data-node="db-history" transform="translate(785, 90)">
+      <rect width="155" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB11/12: History &amp; Logs</text>
+      <text x="10" y="32" class="node-sub">PostgreSQL • Field Records</text>
+    </g>
+
+    <g class="node-card" data-node="db-audit" transform="translate(955, 90)">
+      <rect width="145" height="48" rx="6" fill="#ffffff" stroke="#fde68a" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="10" y="18" class="node-title">DB13: Activity Log</text>
+      <text x="10" y="32" class="node-sub">Secure Monitoring Trace</text>
+    </g>
+  </g>
+
+  <!-- Connectors DB -> Output -->
+  <path d="M 600 755 L 600 780" class="conn-line" stroke="#059669" marker-end="url(#arrow)" />
+
+  <!-- ==================== 5. OUTPUT LAYER ==================== -->
+  <g id="layer-output" class="arch-layer" transform="translate(40, 780)">
+    <rect width="1120" height="110" class="layer-box" fill="url(#outputGrad)" stroke="#10b981" />
+    <text x="16" y="24" class="layer-title" fill="#065f46">5. Output Layer — Delivered to Farmer / Extension Officer</text>
+
+    <!-- Out 1: Disease ID -->
+    <g class="node-card" data-node="out-disease" transform="translate(20, 36)">
+      <rect width="200" height="58" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="12" y="20" class="node-title" fill="#065f46">1. Disease Identification</text>
+      <text x="12" y="35" class="node-sub">• Predicted Label &amp; Confidence</text>
+      <text x="12" y="48" class="node-sub">• Grad-CAM Visual Heatmap</text>
+    </g>
+
+    <!-- Out 2: Pest ID -->
+    <g class="node-card" data-node="out-pest" transform="translate(235, 36)">
+      <rect width="200" height="58" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="12" y="20" class="node-title" fill="#065f46">2. Pest Identification</text>
+      <text x="12" y="35" class="node-sub">• Pest Species &amp; Confidence</text>
+      <text x="12" y="48" class="node-sub">• OOD Unknown Insect Warning</text>
+    </g>
+
+    <!-- Out 3: Treatment Advisory -->
+    <g class="node-card" data-node="out-treatment" transform="translate(450, 36)">
+      <rect width="220" height="58" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="12" y="20" class="node-title" fill="#065f46">3. Treatment Recommendation</text>
+      <text x="12" y="35" class="node-sub">• Chemical &amp; Biological Options</text>
+      <text x="12" y="48" class="node-sub">• Integrated Pest Management</text>
+    </g>
+
+    <!-- Out 4: Safe Dosage -->
+    <g class="node-card" data-node="out-dosage" transform="translate(685, 36)">
+      <rect width="215" height="58" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="12" y="20" class="node-title" fill="#b45309">4. Safe Dosage Guidance</text>
+      <text x="12" y="35" class="node-sub">• Calibrated to Land Area (Acre)</text>
+      <text x="12" y="48" class="node-sub">• Verified Anti-misuse Rules</text>
+    </g>
+
+    <!-- Out 5: Voice & Text Advisory -->
+    <g class="node-card" data-node="out-voice" transform="translate(915, 36)">
+      <rect width="185" height="58" rx="8" fill="#ffffff" stroke="#86efac" stroke-width="1" filter="url(#cardShadow)"/>
+      <text x="12" y="20" class="node-title" fill="#065f46">5. Voice &amp; Text Response</text>
+      <text x="12" y="35" class="node-sub">• Natural Sinhala Audio (TTS)</text>
+      <text x="12" y="48" class="node-sub">• Low-literacy Icon Guides</text>
+    </g>
+  </g>
+</svg>

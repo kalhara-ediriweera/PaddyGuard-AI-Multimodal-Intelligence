@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="pgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="50%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#059669" />
+  <circle cx="32" cy="32" r="26" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4" />
+  <!-- Rice Leaf Shape -->
+  <path d="M18 46 C 18 28, 30 14, 46 16 C 44 32, 32 46, 18 46 Z" fill="url(#pgGrad)" />
+  <path d="M22 42 C 28 32, 36 24, 44 20" stroke="#a7f3d0" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+  <!-- AI Neural Network Nodes -->
+  <circle cx="24" cy="24" r="3.5" fill="url(#aiGrad)" />
+  <circle cx="38" cy="28" r="3" fill="#38bdf8" />
+  <circle cx="32" cy="38" r="3" fill="#fbbf24" />
+  <path d="M24 24 L38 28 L32 38 Z" stroke="#e0f2fe" stroke-width="1.2" opacity="0.6" />
+  <circle cx="24" cy="24" r="5" stroke="#38bdf8" stroke-width="1" opacity="0.5" />
+</svg>

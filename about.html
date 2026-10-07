@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us &amp; Research Team | PaddyGuard AI Research</title>
+  <meta name="description" content="Research team members, academic supervision, institutional affiliation at SLIIT, commercialization strategy, and SDG impacts for PaddyGuard AI (R26-SE-015).">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+          <rect width="64" height="64" rx="14" fill="#059669" />
+          <path d="M18 46 C 18 28, 30 14, 46 16 C 44 32, 32 46, 18 46 Z" fill="#ffffff" />
+          <circle cx="24" cy="24" r="3.5" fill="#38bdf8" />
+          <circle cx="38" cy="28" r="3" fill="#38bdf8" />
+          <circle cx="32" cy="38" r="3" fill="#fbbf24" />
+        </svg>
+        <span class="logo-text">PaddyGuard <span style="color:var(--brand-emerald)">AI</span></span>
+        <span class="logo-badge">R26-SE-015</span>
+      </a>
+
+      <nav role="navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="domain.html" class="nav-link">Domain</a></li>
+          <li><a href="milestones.html" class="nav-link">Milestones</a></li>
+          <li><a href="documents.html" class="nav-link">Documents</a></li>
+          <li><a href="presentations.html" class="nav-link">Presentations</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="global-search-btn" class="search-trigger-btn" aria-label="Open Search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <span>Search...</span>
+          <kbd class="search-kbd">Ctrl K</kbd>
+        </button>
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button id="mobile-menu-btn" class="mobile-menu-btn icon-btn" aria-label="Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <div class="drawer-header">
+      <span style="font-weight:800; color:var(--brand-emerald)">PaddyGuard AI</span>
+      <button id="drawer-close-btn" class="icon-btn">✕</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="domain.html" class="mobile-nav-link">Domain &amp; Methodology</a></li>
+      <li><a href="milestones.html" class="mobile-nav-link">Milestones Tracker</a></li>
+      <li><a href="documents.html" class="mobile-nav-link">Documents Repository</a></li>
+      <li><a href="presentations.html" class="mobile-nav-link">Presentations Deck</a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About Research Team</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact &amp; Supervision</a></li>
+    </ul>
+  </aside>
+
+  <main id="main-content">
+    <section class="section page-header-section">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">&rsaquo;</span>
+          <span class="breadcrumb-current">Research Team &amp; Supervision</span>
+        </nav>
+        <h1 class="page-title">Research Team &amp; Affiliations</h1>
+        <p class="page-subtitle">
+          Undergraduate research candidates, academic supervisors, and agricultural field experts collaborating on multimodal precision agriculture at SLIIT.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sub-navigation -->
+    <nav class="sub-nav-bar" aria-label="Team Sections Navigation">
+      <div class="container">
+        <div class="sub-nav-links">
+          <a href="#team" class="sub-nav-link active">Research Candidates</a>
+          <a href="#supervision" class="sub-nav-link">Academic Supervision</a>
+          <a href="#commercialization" class="sub-nav-link">Commercialization Roadmap</a>
+          <a href="#ip-assets" class="sub-nav-link">Intellectual Property</a>
+          <a href="#sdgs" class="sub-nav-link">SDG Social Impact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== 1. RESEARCH TEAM ==================== -->
+    <section class="section" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Student Researchers</span>
+          <h2 class="section-title">Undergraduate Research Candidates</h2>
+          <p class="section-subtitle">
+            B.Sc. (Hons) Degree in Information Technology Specialized in Software Engineering &bull; SLIIT
+          </p>
+        </div>
+
+        <div class="team-grid" id="team-members-container">
+          <!-- Populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 2. SUPERVISION ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="supervision">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Faculty Mentorship</span>
+          <h2 class="section-title">Academic &amp; Field Supervision</h2>
+          <p class="section-subtitle">
+            Guidance from Department of Information Technology faculty and Sri Lankan agronomy specialists
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card" style="border-top:4px solid var(--brand-forest);">
+            <span class="badge badge-success" style="margin-bottom:0.75rem;">Research Supervisor</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Dr. Nathali Silva</h3>
+            <p style="font-size:0.85rem; color:var(--brand-emerald-dark); font-weight:700; margin-bottom:0.75rem;">
+              Senior Lecturer &bull; Department of Information Technology
+            </p>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+              <strong>Institution:</strong> Sri Lanka Institute of Information Technology (SLIIT)<br>
+              <strong>Domain Focus:</strong> Deep learning system architectures, Out-of-Distribution evaluation rigor, and research dissertation guidance.
+            </p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--brand-cyan);">
+            <span class="badge badge-info" style="margin-bottom:0.75rem;">Co-Supervisor</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Ms. Poorna Panduwawala</h3>
+            <p style="font-size:0.85rem; color:var(--brand-cyan); font-weight:700; margin-bottom:0.75rem;">
+              Lecturer &bull; Department of Information Technology
+            </p>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+              <strong>Institution:</strong> Sri Lanka Institute of Information Technology (SLIIT)<br>
+              <strong>Domain Focus:</strong> Microservice API architecture, model fine-tuning workflows, and experimental baseline benchmarking.
+            </p>
+          </div>
+
+          <div class="card" style="border-top:4px solid var(--brand-purple);">
+            <span class="badge badge-purple" style="margin-bottom:0.75rem;">External Field Expert</span>
+            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Mrs. Anoma Gunarathna</h3>
+            <p style="font-size:0.85rem; color:var(--brand-purple); font-weight:700; margin-bottom:0.75rem;">
+              Agricultural Research Officer &bull; Phytosanitary Services
+            </p>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+              <strong>Institution:</strong> Department of Agriculture, Sri Lanka<br>
+              <strong>Domain Focus:</strong> Rice cultivation field practices, paddy pathogen symptom verification, and qualitative evaluation of Grad-CAM heatmaps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. COMMERCIALIZATION PLAN ==================== -->
+    <section class="section" id="commercialization">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Technology Transfer</span>
+          <h2 class="section-title">Commercialization &amp; Deployment Strategy</h2>
+          <p class="section-subtitle">
+            Transitioning academic research prototypes toward sustainable agricultural services
+          </p>
+        </div>
+
+        <div class="academic-notice warning" style="margin-bottom: 2rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          <div>
+            <strong>Indicative Model Disclaimer:</strong>
+            <p>
+              Pricing tiers and business projections represent a proposed commercialization framework formulated for university research assessment, not finalized retail subscriptions.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-2" style="margin-bottom:2.5rem;">
+          <div class="card">
+            <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Target User Persona</h3>
+            <div style="background:var(--bg-tertiary); padding:1rem; border-radius:var(--radius-md); font-size:0.875rem; line-height:1.6; margin-bottom:1rem;">
+              <strong>Persona:</strong> Saman Perera (Typical Smallholder)<br>
+              <strong>Demographics:</strong> Male farmer, 46 years old, Polonnaruwa District<br>
+              <strong>Cultivation Scale:</strong> 3 acres of irrigated paddy (Samba &amp; Nadu cultivars)<br>
+              <strong>Digital Device:</strong> Android 10 smartphone with 4G mobile connectivity<br>
+              <strong>Pain Point:</strong> Agricultural extension officers visit infrequently; delay in foliar disease identification leads to costly uncalibrated pesticide purchases.
+            </div>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">
+              Other key market segments include agricultural extension officers seeking rapid field validation tools and farmer cooperative societies managing collective input procurement.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="font-size:1.25rem; margin-bottom:0.75rem;">Core Value Propositions</h3>
+            <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.7;">
+              <li><strong>Immediate On-Device Diagnosis:</strong> Reduces foliar diagnostic delay from days to under 500 milliseconds.</li>
+              <li><strong>OOD Misdiagnosis Protection:</strong> Prevents catastrophic agrochemical misapplication on non-target weeds or unfamiliar bugs.</li>
+              <li><strong>Grad-CAM Visual Transparency:</strong> Fosters farmer and extension officer trust by highlighting the exact diseased lesion regions.</li>
+              <li><strong>Spoken Sinhala Interaction:</strong> Eliminates literacy barriers through voice-first symptom input and voice synthesized guidance.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="font-size:1.25rem; margin-bottom:1rem; color:var(--text-primary);">Indicative Commercial Model (Freemium SaaS)</h3>
+        <div class="grid grid-3">
+          <div class="card" style="text-align:center;">
+            <span class="badge badge-neutral" style="margin-bottom:0.5rem;">Tier 1</span>
+            <h4 style="font-size:1.25rem;">Basic Farmer</h4>
+            <div style="font-size:1.75rem; font-weight:800; color:var(--brand-forest); margin:0.75rem 0;">Free (0 LKR)</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+              Up to 20 multimodal diagnoses per month, basic disease/pest alerts, voice synthesized advisory in Sinhala.
+            </p>
+          </div>
+
+          <div class="card" style="text-align:center; border:2px solid var(--brand-emerald);">
+            <span class="badge badge-success" style="margin-bottom:0.5rem;">Tier 2</span>
+            <h4 style="font-size:1.25rem;">Farmer Pro</h4>
+            <div style="font-size:1.75rem; font-weight:800; color:var(--brand-emerald-dark); margin:0.75rem 0;">LKR 990 / mo</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+              Unlimited diagnoses, complete historical disease tracking across multiple fields, calibrated chemical dosage calculator.
+            </p>
+          </div>
+
+          <div class="card" style="text-align:center;">
+            <span class="badge badge-purple" style="margin-bottom:0.5rem;">Tier 3</span>
+            <h4 style="font-size:1.25rem;">Cooperative / Enterprise</h4>
+            <div style="font-size:1.75rem; font-weight:800; color:var(--brand-purple); margin:0.75rem 0;">$150 – 500 / mo</div>
+            <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1rem;">
+              Institutional dashboard for extension offices, district epidemic heatmaps, REST API integration with farm ERP software.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. INTELLECTUAL PROPERTY ==================== -->
+    <section class="section" style="background:var(--bg-secondary);" id="ip-assets">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Research Assets</span>
+          <h2 class="section-title">Potential Intellectual Property (IP)</h2>
+          <p class="section-subtitle">
+            Distinct technological contributions identified for intellectual property protection
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h4 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--text-primary);">Core Potential IP Assets:</h4>
+            <ul style="padding-left:1.25rem; font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">
+              <li>Trained CNN model checkpoint weights and calibrated temperature thresholds for ODIN and OpenMax.</li>
+              <li>Proprietary Sri Lankan field leaf disease and insect pest photographic dataset.</li>
+              <li>Specialized Sinhala agricultural spoken symptom vocabulary and acoustic model adaptations.</li>
+              <li>Deterministic expert safety validation rules and chemical acreage dosage calculation algorithms.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h4 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--text-primary);">Licensing &amp; Patent Strategy:</h4>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65; margin-bottom:1rem;">
+              The research team will investigate patent applications with the <strong>Sri Lanka National Intellectual Property Office (NIPO)</strong> for the OOD-integrated agricultural screening pipeline.
+            </p>
+            <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+              The non-commercial codebase will be released under an academic-use license for reproducibility, while maintaining commercialization rights with the research authors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. SDG SOCIAL IMPACT ==================== -->
+    <section class="section" id="sdgs">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Sustainable Impact</span>
+          <h2 class="section-title">United Nations Sustainable Development Goals (SDGs)</h2>
+          <p class="section-subtitle">
+            Direct contributions toward global food security, health, innovation, and environmental protection
+          </p>
+        </div>
+
+        <div class="grid grid-4" id="sdgs-container">
+          <!-- Populated from js/data.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>PaddyGuard <span style="color:var(--brand-emerald)">AI</span></h3>
+          <p>Undergraduate Research Project &bull; SLIIT Faculty of Computing</p>
+          <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-top:0.5rem;">
+            Project ID: R26-SE-015
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About Links</h4>
+          <ul class="footer-links">
+            <li><a href="#team">Researchers</a></li>
+            <li><a href="#supervision">Supervisors</a></li>
+            <li><a href="#commercialization">Commercial Model</a></li>
+            <li><a href="#sdgs">SDG Alignment</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>SLIIT Information</h4>
+          <ul class="footer-links">
+            <li><span>Supervisor: Dr. Nathali Silva</span></li>
+            <li><span>Dept. of Information Technology</span></li>
+            <li><span>March 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 PaddyGuard AI Research Team. All Rights Reserved.</div>
+        <div>SLIIT B.Sc. (Hons) Software Engineering</div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <div id="search-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-content search-modal-content">
+      <button class="modal-close-btn">✕</button>
+      <h3 style="font-size:1.25rem; margin-bottom:1rem;">Search Research Documentation</h3>
+      <div class="search-input-wrapper">
+        <input type="text" id="global-search-input" placeholder="Search team, roles, SDGs, supervision..." autocomplete="off">
+        <span id="search-results-count" style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">0 results</span>
+      </div>
+      <ul id="search-results-list" class="search-results-list"></ul>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+
+  <!-- Populate Team & SDGs -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Team Cards
+      const teamContainer = document.getElementById('team-members-container');
+      if (teamContainer && projectData.team) {
+        teamContainer.innerHTML = projectData.team.map(m => `
+          <div class="team-card">
+            <div class="team-avatar">${m.name.charAt(0)}</div>
+            <div class="team-info" style="flex:1;">
+              <span class="badge badge-info" style="margin-bottom:0.35rem;">Component ${m.componentNumber}</span>
+              <h3>${m.name}</h3>
+              <div class="student-id">${m.studentId}</div>
+              <div class="team-role">${m.role}</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+                <strong>Key Responsibilities:</strong><br>
+                ${m.responsibilities.join(' • ')}
+              </p>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
+                <strong>Shared Duties:</strong> ${m.sharedDuties}
+              </div>
+              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark);">
+                ✉️ ${m.email}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // 2. SDGs
+      const sdgContainer = document.getElementById('sdgs-container');
+      if (sdgContainer && projectData.sdgs) {
+        sdgContainer.innerHTML = projectData.sdgs.map(s => `
+          <div class="card" style="display:flex; flex-direction:column;">
+            <span class="badge badge-success" style="align-self:flex-start; margin-bottom:0.75rem;">${s.target}</span>
+            <h4 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:0.5rem;">${s.goal}</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary); flex-grow:1;">${s.contribution}</p>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
+</body>
+</html>
