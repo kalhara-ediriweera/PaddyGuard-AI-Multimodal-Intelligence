@@ -67,79 +67,83 @@ const projectData = {
   team: [
     {
       id: "member-1",
+      name: "Weerasinghe KGJP",
+      studentId: "IT22273680",
+      role: "Lead Researcher: Component 1",
+      componentNumber: 1,
+      componentTitle: "Voice-Based Rice Disease Diagnosis using Speech Recognition & NLP",
+      weight: "25%",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C1_IT22273680.pdf",
+      technologies: ["OpenAI Whisper (large-v3)", "SentencePiece", "BERT / RoBERTa", "Sinhala TTS (Google/Coqui)", "PyTorch", "FastAPI"],
+      responsibilities: [
+        "Curating and annotating Sinhala spoken symptom corpus with 1,500+ voice recordings across Polonnaruwa, Kurunegala, Anuradhapura",
+        "Fine-tuning OpenAI Whisper ASR on agricultural vocabulary targeting Word Error Rate (WER) < 15%",
+        "Developing Sinhala Unicode normalization, SentencePiece tokenization, and agricultural Named Entity Recognition (NER)",
+        "Fine-tuning transformer classifiers (BERT/RoBERTa) for 4 disease categories achieving >= 85% accuracy",
+        "Engineering adaptive decision-tree dialogue module and Sinhala Text-to-Speech (TTS) voice advisory pipeline"
+      ],
+      sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
+      email: "it22273680@my.sliit.lk"
+    },
+    {
+      id: "member-2",
       name: "Hewanayake H.M.L.M",
       studentId: "IT22168740",
       role: "Lead Researcher: Component 2",
       componentNumber: 2,
       componentTitle: "Rice Leaf Disease Classification with Out-of-Distribution Detection",
       weight: "25%",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C2_IT22168740.pdf",
       technologies: ["ResNet50", "EfficientNetB3", "DenseNet121", "ODIN", "Mahalanobis Distance", "OpenMax", "Grad-CAM", "PyTorch"],
       responsibilities: [
-        "Curating and balancing 4-class rice leaf disease dataset (Blight, Blast, Brown Spot, Healthy)",
-        "Benchmarking transfer learning CNN backbones (ResNet50, EfficientNetB3, DenseNet121)",
-        "Integrating OOD detection methods (ODIN, Mahalanobis, OpenMax) to reject non-rice foliage",
-        "Generating Grad-CAM visual activation heatmaps to verify biological lesion attention",
-        "Exporting optimized lightweight models for mobile/edge inference"
+        "Curating and balancing 4-class rice leaf disease dataset (Bacterial Blight, Leaf Blast, Brown Spot, Healthy)",
+        "Benchmarking transfer learning CNN backbones (ResNet50, EfficientNetB3, DenseNet121) on mobile inference efficiency",
+        "Integrating OOD detection methods (ODIN, Mahalanobis, OpenMax) to reject non-rice foliage, weeds, and unseen diseases",
+        "Generating Grad-CAM visual activation heatmaps to verify biological lesion attention and cultivate farmer trust",
+        "Exporting optimized lightweight models (TensorFlow Lite / ONNX) for edge and server-side deployment"
       ],
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22168740@my.sliit.lk"
     },
     {
-      id: "member-2",
+      id: "member-3",
       name: "Keshan B K",
       studentId: "IT22303820",
-      role: "Lead Researcher: Component 1",
-      componentNumber: 1,
-      componentTitle: "Voice-Based Rice Disease Diagnosis using Speech Recognition & NLP",
+      role: "Lead Researcher: Component 3",
+      componentNumber: 3,
+      componentTitle: "Hybrid AI and Knowledge-Based Rice Treatment Recommendation & Advisory Chatbot",
       weight: "25%",
-      technologies: ["Whisper / Vosk ASR", "TF-IDF", "SVM / Naive Bayes", "BERT / RoBERTa", "Sinhala TTS", "PyTorch"],
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C3_IT22303820.pdf",
+      technologies: ["Retrieval-Augmented Generation (RAG)", "FAISS / MongoDB Atlas Vector Search", "LangChain / Transformers", "Deterministic Rule Engine", "Dosage Engine", "FastAPI / Node.js"],
       responsibilities: [
-        "Collecting and annotating Sinhala spoken symptom descriptions through farmer field interviews",
-        "Converting farmer 16kHz speech streams into normalized Sinhala text transcripts",
-        "Extracting clinical symptom keywords using TF-IDF and domain vocabulary dictionaries",
-        "Training transformer-based NLP classifiers (BERT) against traditional ML baselines",
-        "Developing Sinhala Text-to-Speech (TTS) voice synthesis for low-literacy farmers"
+        "Engineering structured agricultural knowledge base from IRRI Rice Knowledge Bank, FAO guidelines, and DOA Sri Lanka manuals",
+        "Building semantic vector database and domain-grounded RAG retrieval pipeline for context-aware treatment advice",
+        "Formulating deterministic expert rules to strictly validate and verify chemical and biological treatments against hallucinations",
+        "Developing calibrated land acreage-to-dosage chemical calculation algorithms for 16L knapsack sprayers",
+        "Integrating conversational chatbot interface consuming diagnostic outcomes from C1, C2, and C4"
       ],
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22303820@my.sliit.lk"
     },
     {
-      id: "member-3",
+      id: "member-4",
       name: "Kalhara E P K",
       studentId: "IT22065858",
       role: "Lead Researcher: Component 4",
       componentNumber: 4,
       componentTitle: "Rice Pest Detection using Deep Learning with Out-of-Distribution Detection",
       weight: "25%",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C4_IT22065858.pdf",
       technologies: ["YOLOv8", "ResNet50", "EfficientNet", "ODIN / Mahalanobis", "PyTorch / TensorFlow", "OpenCV"],
       responsibilities: [
-        "Curating representative rice pest datasets (IP02, specialized agricultural repositories)",
-        "Training deep learning & object detection models (YOLOv8, ResNet) for common paddy insect pests",
-        "Integrating Out-of-Distribution (OOD) screening to reject unfamiliar insects and non-pest images",
-        "Evaluating model precision, recall, and detection speed under complex foliage backgrounds",
-        "Formulating pest diagnostic alert payloads and threshold calibrations"
+        "Curating representative rice pest datasets (IP102 benchmark, local field imagery) for common paddy insect threats",
+        "Training deep learning & object detection models (YOLOv8, ResNet) for small insect pests in cluttered field foliage",
+        "Integrating Out-of-Distribution (OOD) screening to reject unfamiliar insects and non-pest field photos",
+        "Evaluating model precision, recall, and detection speed under complex foliage backgrounds and varying illumination",
+        "Formulating pest diagnostic alert payloads, threshold calibrations, and commercialization roadmap"
       ],
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22065858@my.sliit.lk"
-    },
-    {
-      id: "member-4",
-      name: "Weerasinghe KGJP",
-      studentId: "IT22273680",
-      role: "Lead Researcher: Component 3",
-      componentNumber: 3,
-      componentTitle: "Hybrid AI and Knowledge-Based Rice Treatment Recommendation & Advisory Chatbot",
-      weight: "25%",
-      technologies: ["Retrieval-Augmented Generation (RAG)", "FAISS / ChromaDB", "LLM (Llama / OpenAI compatible)", "Rule-based Expert System", "PostgreSQL"],
-      responsibilities: [
-        "Engineering agricultural knowledge base from IRRI Rice Knowledge Bank, FAO, and DOA Sri Lanka guidelines",
-        "Building semantic vector database and domain-grounded RAG retrieval pipeline",
-        "Formulating deterministic expert rules to strictly validate and verify chemical and biological treatments",
-        "Developing calibrated land acreage-to-dosage chemical calculation algorithms",
-        "Integrating conversational chatbot interface consuming diagnostic outcomes from C1, C2, and C4"
-      ],
-      sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
-      email: "it22273680@my.sliit.lk"
     }
   ],
 
@@ -149,10 +153,11 @@ const projectData = {
       id: "c1",
       number: "01",
       title: "Voice-Based Rice Disease Diagnosis",
-      lead: "Keshan B K (IT22303820)",
+      lead: "Weerasinghe KGJP (IT22273680)",
       badge: "Speech Recognition & NLP",
       weight: "25% Component Weight",
       icon: "mic",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C1_IT22273680.pdf",
       summary: "Empowers smallholder farmers to verbally describe crop symptoms in natural spoken Sinhala, overcoming literacy and digital divide barriers with speech-to-text, symptom keyword extraction, BERT classification, and synthesized voice advisory.",
       problem: "Many rural farmers experience low literacy and struggle to articulate symptom terms in English or mobile form fields. Delay in verbal consultation leads to catastrophic spread of foliar epidemics.",
       pipeline: [
@@ -187,6 +192,7 @@ const projectData = {
       badge: "Computer Vision & OOD",
       weight: "25% Component Weight",
       icon: "leaf",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C2_IT22168740.pdf",
       summary: "Diagnoses foliar rice diseases from smartphone photos using transfer-learning CNN architectures, deploying Out-of-Distribution (OOD) screening to reject non-rice leaves or unseen conditions, verified with Grad-CAM visual heatmaps.",
       problem: "Standard closed-world classifiers force non-rice leaves, weeds, or soil into trained categories with false 99% confidence, resulting in incorrect agrochemical spraying.",
       pipeline: [
@@ -216,45 +222,12 @@ const projectData = {
     {
       id: "c3",
       number: "03",
-      title: "Rice Pest Detection + OOD",
-      lead: "Kalhara E P K (IT22065858)",
-      badge: "Pest Vision & OOD",
-      weight: "25% Component Weight",
-      icon: "bug",
-      summary: "Detects and localizes common destructive rice insect pests from field imagery using deep learning (YOLOv8 and CNN backbones), while integrating OOD mechanisms to identify and reject unfamiliar insects that do not belong to the trained dataset.",
-      problem: "Pests in paddy fields are small, camouflaged, and appear among complex foliage. Existing AI tools mistake harmless or unseen insects for catastrophic pests, causing unnecessary pesticide purchases and toxicity.",
-      pipeline: [
-        "Field Pest Image Capture / Upload",
-        "Preprocessing, Noise Filtering & Multi-scale Normalization",
-        "Deep Learning Feature Extraction & Localization (YOLOv8 / ResNet50 / EfficientNet)",
-        "Out-of-Distribution (OOD) Unknown Insect Gate (ODIN / Mahalanobis)",
-        "Pest Species Identification & Bounding Box Classification",
-        "Confidence Score Verification & Alert Payload to Advisory Module"
-      ],
-      targetClasses: [
-        "Brown Planthopper (Nilaparvata lugens)",
-        "Rice Stem Borer (Scirpophaga incertulas)",
-        "Rice Leaf Folder (Cnaphalocrocis medinalis)",
-        "Rice Whorl Maggot (Hydrellia philippina)",
-        "Rice Gall Midge (Orseolia oryzae)"
-      ],
-      technologies: ["YOLOv8", "ResNet50", "EfficientNet", "OOD Detection (ODIN / Mahalanobis)", "PyTorch / TensorFlow", "OpenCV"],
-      researchQuestions: [
-        "Can deep learning and YOLO models accurately detect small rice pests against complex, variable foliage backgrounds?",
-        "How effectively can OOD detection reject unseen or non-agricultural insect species to prevent false alarms?",
-        "How does pest detection seamlessly complement foliar disease diagnosis in integrated pest management (IPM)?"
-      ],
-      status: "YOLOv8 model training & insect OOD benchmarking in progress",
-      datasetInfo: "IP02 Large Scale Insect Pest Dataset, Kaggle rice pest detection dataset, local field insect photography."
-    },
-    {
-      id: "c4",
-      number: "04",
       title: "Hybrid AI Treatment Advisory & RAG Chatbot",
-      lead: "Weerasinghe KGJP (IT22273680)",
+      lead: "Keshan B K (IT22303820)",
       badge: "RAG & Expert System",
       weight: "25% Component Weight",
       icon: "chat",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C3_IT22303820.pdf",
       summary: "A dual-layered decision support system combining Retrieval-Augmented Generation (RAG) over verified agronomic literature with deterministic expert rules and an acreage-calibrated safe chemical dosage calculator to eliminate hallucinations.",
       problem: "Standard LLMs hallucinate illegal pesticides or toxic dosages. Farmers lack verified guidance that connects diagnostic findings with calibrated sprayer tank measurements and integrated pest management (IPM).",
       pipeline: [
@@ -280,6 +253,41 @@ const projectData = {
       ],
       status: "Knowledge vectorization & deterministic rule engineering in progress",
       datasetInfo: "IRRI Rice Knowledge Bank, FAO Rice Production Guidelines, Department of Agriculture Sri Lanka guides (PDF & tables)."
+    },
+    {
+      id: "c4",
+      number: "04",
+      title: "Rice Pest Detection + OOD",
+      lead: "Kalhara E P K (IT22065858)",
+      badge: "Pest Vision & OOD",
+      weight: "25% Component Weight",
+      icon: "bug",
+      proposalUrl: "documents/R26-SE-015_Proposal_Report_C4_IT22065858.pdf",
+      summary: "Detects and localizes common destructive rice insect pests from field imagery using deep learning (YOLOv8 and CNN backbones), while integrating OOD mechanisms to identify and reject unfamiliar insects that do not belong to the trained dataset.",
+      problem: "Pests in paddy fields are small, camouflaged, and appear among complex foliage. Existing AI tools mistake harmless or unseen insects for catastrophic pests, causing unnecessary pesticide purchases and toxicity.",
+      pipeline: [
+        "Field Pest Image Capture / Upload",
+        "Preprocessing, Noise Filtering & Multi-scale Normalization",
+        "Deep Learning Feature Extraction & Localization (YOLOv8 / ResNet50 / EfficientNet)",
+        "Out-of-Distribution (OOD) Unknown Insect Gate (ODIN / Mahalanobis)",
+        "Pest Species Identification & Bounding Box Classification",
+        "Confidence Score Verification & Alert Payload to Advisory Module"
+      ],
+      targetClasses: [
+        "Brown Planthopper (Nilaparvata lugens)",
+        "Rice Stem Borer (Scirpophaga incertulas)",
+        "Rice Leaf Folder (Cnaphalocrocis medinalis)",
+        "Rice Whorl Maggot (Hydrellia philippina)",
+        "Rice Gall Midge (Orseolia oryzae)"
+      ],
+      technologies: ["YOLOv8", "ResNet50", "EfficientNet", "OOD Detection (ODIN / Mahalanobis)", "PyTorch / TensorFlow", "OpenCV"],
+      researchQuestions: [
+        "Can deep learning and YOLO models accurately detect small rice pests against complex, variable foliage backgrounds?",
+        "How effectively can OOD detection reject unseen or non-agricultural insect species to prevent false alarms?",
+        "How does pest detection seamlessly complement foliar disease diagnosis in integrated pest management (IPM)?"
+      ],
+      status: "YOLOv8 model training & insect OOD benchmarking in progress",
+      datasetInfo: "IP02 Large Scale Insect Pest Dataset, Kaggle rice pest detection dataset, local field insect photography."
     }
   ],
 
@@ -373,7 +381,7 @@ const projectData = {
       number: "02",
       name: "Progress Presentation 1",
       assessment: "Progress Review 1 (PP1)",
-      status: "Upcoming",
+      status: "Completed",
       date: "To be updated",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
@@ -386,7 +394,7 @@ const projectData = {
       number: "03",
       name: "Progress Presentation 2",
       assessment: "Progress Review 2 (PP2)",
-      status: "Upcoming",
+      status: "Completed",
       date: "To be updated",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
@@ -434,54 +442,57 @@ const projectData = {
       fileUrl: "",
       status: "To be updated"
     },
+
     {
-      id: "doc-2",
-      title: "Consolidated Project Proposal Document",
-      code: "SE-PROP-MAIN",
+      id: "doc-3",
+      title: "Project Proposal: Component 1 (Voice-Based Symptom Diagnosis & NLP)",
+      code: "SE-PROP-C1",
       category: "Proposal Document",
-      description: "Consolidated research proposal document encompassing all four intelligent components (Voice, Leaf Disease, Treatment, Pest Detection).",
-      author: "PaddyGuard AI Research Team",
-      fileUrl: "",
+      description: "Research proposal detailing Sinhala speech recognition (OpenAI Whisper ASR), SentencePiece tokenization, transformer NLP disease classification (BERT/RoBERTa), and Sinhala TTS feedback.",
+      author: "Weerasinghe KGJP (IT22273680)",
+      fileUrl: "documents/R26-SE-015_Proposal_Report_C1_IT22273680.pdf",
+      fileSize: "1.00 MB",
+      pages: "39 Pages",
+      submissionDate: "March 2026",
       status: "Available"
     },
     {
-      id: "doc-3",
-      title: "Proposal Report: Component 1 (Voice-Based Symptom Diagnosis)",
-      code: "SE-PROP-C1",
-      category: "Proposal Document",
-      description: "Research proposal for speech recognition, Sinhala phonetics, TF-IDF symptom feature extraction, and transformer-based NLP disease classification.",
-      author: "Keshan B K (IT22303820)",
-      fileUrl: "",
-      status: "To be updated"
-    },
-    {
       id: "doc-4",
-      title: "Proposal Report: Component 2 (Leaf Disease Classification & OOD)",
+      title: "Project Proposal: Component 2 (Leaf Disease Classification & OOD)",
       code: "SE-PROP-C2",
       category: "Proposal Document",
-      description: "Research proposal detailing CNN architectures, OOD methods (ODIN, Mahalanobis, OpenMax), Grad-CAM, and methodology for leaf disease detection.",
+      description: "Research proposal detailing CNN transfer learning architectures (ResNet50, EfficientNetB3, DenseNet121), OOD methods (ODIN, Mahalanobis, OpenMax), and Grad-CAM visual interpretability.",
       author: "Hewanayake H.M.L.M (IT22168740)",
-      fileUrl: "documents/R26-SE-015_Proposal_Report_C2.pdf",
+      fileUrl: "documents/R26-SE-015_Proposal_Report_C2_IT22168740.pdf",
+      fileSize: "0.89 MB",
+      pages: "30 Pages",
+      submissionDate: "March 2026",
       status: "Available"
     },
     {
       id: "doc-5",
-      title: "Proposal Report: Component 3 (Treatment Advisory & RAG Chatbot)",
+      title: "Project Proposal: Component 3 (Treatment Advisory & RAG Chatbot)",
       code: "SE-PROP-C3",
       category: "Proposal Document",
-      description: "Research proposal detailing knowledge vectorization, RAG conversational chatbot, deterministic rule engine for pesticide validation, and safe dosage calculations.",
-      author: "Weerasinghe KGJP (IT22273680)",
-      fileUrl: "",
-      status: "To be updated"
+      description: "Research proposal detailing agronomic knowledge retrieval (RAG), conversational chatbot, deterministic pesticide safety validation, and farm acreage sprayer dosage calculations.",
+      author: "Keshan B K (IT22303820)",
+      fileUrl: "documents/R26-SE-015_Proposal_Report_C3_IT22303820.pdf",
+      fileSize: "1.35 MB",
+      pages: "42 Pages",
+      submissionDate: "March 2026",
+      status: "Available"
     },
     {
       id: "doc-6",
-      title: "Proposal Report: Component 4 (Rice Pest Detection & OOD)",
+      title: "Project Proposal: Component 4 (Rice Pest Detection & OOD)",
       code: "SE-PROP-C4",
       category: "Proposal Document",
-      description: "Research proposal detailing rice pest identification using YOLOv8 & CNNs, unknown insect OOD rejection, budget, and commercialization strategies.",
+      description: "Research proposal detailing rice pest identification using YOLOv8 & CNNs, unknown insect Out-of-Distribution (OOD) rejection, budget justification, and commercialization roadmap.",
       author: "Kalhara E P K (IT22065858)",
-      fileUrl: "documents/R26-SE-015_Proposal_Report_C4.pdf",
+      fileUrl: "documents/R26-SE-015_Proposal_Report_C4_IT22065858.pdf",
+      fileSize: "1.08 MB",
+      pages: "34 Pages",
+      submissionDate: "March 2026",
       status: "Available"
     },
     {
@@ -530,7 +541,7 @@ const projectData = {
       code: "SE-FINAL-C1",
       category: "Final Document",
       description: "Final specialized technical report covering Sinhala speech recognition, BERT classification, and audio evaluation metrics.",
-      author: "Keshan B K (IT22303820)",
+      author: "Weerasinghe KGJP (IT22273680)",
       fileUrl: "",
       status: "Pending final submission"
     },
@@ -546,11 +557,11 @@ const projectData = {
     },
     {
       id: "doc-13",
-      title: "Final Document: Component 3 Report (Treatment & RAG)",
+      title: "Final Document: Component 3 Report (Treatment Advisory & RAG)",
       code: "SE-FINAL-C3",
       category: "Final Document",
       description: "Final specialized technical report covering RAG pipeline evaluation, deterministic safety verification, and dosage calculation findings.",
-      author: "Weerasinghe KGJP (IT22273680)",
+      author: "Keshan B K (IT22303820)",
       fileUrl: "",
       status: "Pending final submission"
     },

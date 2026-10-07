@@ -382,7 +382,10 @@
           <div class="team-card">
             <div class="team-avatar">${m.name.charAt(0)}</div>
             <div class="team-info" style="flex:1;">
-              <span class="badge badge-info" style="margin-bottom:0.35rem;">Component ${m.componentNumber}</span>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem; flex-wrap:wrap; gap:0.25rem;">
+                <span class="badge badge-info">Component ${m.componentNumber}</span>
+                <span class="badge badge-success" style="font-size:0.75rem;">Proposal Submitted</span>
+              </div>
               <h3>${m.name}</h3>
               <div class="student-id">${m.studentId}</div>
               <div class="team-role">${m.role}</div>
@@ -393,9 +396,20 @@
               <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
                 <strong>Shared Duties:</strong> ${m.sharedDuties}
               </div>
-              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark);">
+              <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--brand-emerald-dark); margin-bottom:0.75rem;">
                 ✉️ ${m.email}
               </div>
+              ${m.proposalUrl ? `
+                <div style="margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid var(--border-subtle); display:flex; gap:0.5rem; flex-wrap:wrap;">
+                  <a href="${m.proposalUrl}" target="_blank" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    Download Proposal
+                  </a>
+                  <a href="documents.html" class="btn btn-secondary btn-sm" style="flex:1; justify-content:center;">
+                    Repository &rarr;
+                  </a>
+                </div>
+              ` : ''}
             </div>
           </div>
         `).join('');
