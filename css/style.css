@@ -466,7 +466,11 @@ img, svg {
   top: 0;
   right: -100%;
   width: 290px;
+  max-width: 85vw;
   height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   background: var(--bg-secondary);
   box-shadow: var(--shadow-xl);
   z-index: 1001;
@@ -547,6 +551,7 @@ img, svg {
   line-height: 1.4;
   white-space: nowrap;
   user-select: none;
+  max-width: 100%;
 }
 
 .btn:active {

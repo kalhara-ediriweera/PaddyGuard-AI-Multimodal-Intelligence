@@ -588,9 +588,26 @@
 
 .voice-sample-btn-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.65rem;
   margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.voice-sample-btn {
+  white-space: normal !important;
+  text-align: left;
+  line-height: 1.45;
+  padding: 0.65rem 1rem;
+  width: 100%;
+  border-radius: var(--radius-md);
+}
+
+.voice-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 1rem;
 }
 
 /* 2. Grad-CAM & OOD Visualizer */
@@ -965,7 +982,9 @@
 /* ==================== TABLES (REQUIREMENTS, DATASETS, BUDGET) ==================== */
 .table-responsive {
   width: 100%;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   background: var(--bg-card);
@@ -975,6 +994,7 @@
 
 .academic-table {
   width: 100%;
+  min-width: 620px;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.9rem;
