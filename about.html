@@ -115,9 +115,7 @@
         <div class="sub-nav-links">
           <a href="#team" class="sub-nav-link active">Research Candidates</a>
           <a href="#supervision" class="sub-nav-link">Academic Supervision</a>
-          <a href="#commercialization" class="sub-nav-link">Commercialization Roadmap</a>
-          <a href="#ip-assets" class="sub-nav-link">Intellectual Property</a>
-          <a href="#sdgs" class="sub-nav-link">SDG Social Impact</a>
+          
         </div>
       </div>
     </nav>
@@ -151,43 +149,76 @@
         </div>
 
         <div class="grid grid-3">
-          <div class="card" style="border-top:4px solid var(--brand-forest);">
-            <span class="badge badge-success" style="margin-bottom:0.75rem;">Research Supervisor</span>
-            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Dr. Nathali Silva</h3>
-            <p style="font-size:0.85rem; color:var(--brand-emerald-dark); font-weight:700; margin-bottom:0.75rem;">
-              Senior Lecturer &bull; Department of Information Technology
-            </p>
-            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+          <div class="card" style="border-top:4px solid var(--brand-forest); display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+              <div style="width:72px; height:72px; border-radius:var(--radius-full); overflow:hidden; flex-shrink:0; border:2px solid var(--brand-forest); background:var(--bg-tertiary); position:relative;">
+                <img src="documents/supervisor.jpg" alt="Dr. Nathali Silva" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--brand-forest), var(--brand-emerald)); color:#fff; font-size:1.4rem; font-weight:800;">N</span>
+              </div>
+              <div>
+                <span class="badge badge-success" style="margin-bottom:0.35rem;">Research Supervisor</span>
+                <h3 style="font-size:1.25rem; margin:0; line-height:1.3;">Dr. Nathali Silva</h3>
+                <div style="font-size:0.8rem; color:var(--brand-emerald-dark); font-weight:700; margin-top:0.2rem;">
+                  Senior Lecturer &bull; IT Dept
+                </div>
+              </div>
+            </div>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem; flex-grow:1;">
               <strong>Institution:</strong> Sri Lanka Institute of Information Technology (SLIIT)<br>
               <strong>Domain Focus:</strong> Deep learning system architectures, Out-of-Distribution evaluation rigor,
               and research dissertation guidance.
             </p>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); margin-top:auto; padding-top:0.75rem; border-top:1px solid var(--border-color);">
+              ✉️ nathali.s@sliit.lk
+            </div>
           </div>
 
-          <div class="card" style="border-top:4px solid var(--brand-cyan);">
-            <span class="badge badge-info" style="margin-bottom:0.75rem;">Co-Supervisor</span>
-            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Ms. Poorna Panduwawala</h3>
-            <p style="font-size:0.85rem; color:var(--brand-cyan); font-weight:700; margin-bottom:0.75rem;">
-              Lecturer &bull; Department of Information Technology
-            </p>
-            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+          <div class="card" style="border-top:4px solid var(--brand-cyan); display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+              <div style="width:72px; height:72px; border-radius:var(--radius-full); overflow:hidden; flex-shrink:0; border:2px solid var(--brand-cyan); background:var(--bg-tertiary); position:relative;">
+                <img src="documents/co_supervisor.jpg" alt="Ms. Poorna Panduwawala" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--brand-cyan), #0284c7); color:#fff; font-size:1.4rem; font-weight:800;">P</span>
+              </div>
+              <div>
+                <span class="badge badge-info" style="margin-bottom:0.35rem;">Co-Supervisor</span>
+                <h3 style="font-size:1.25rem; margin:0; line-height:1.3;">Ms. Poorna Panduwawala</h3>
+                <div style="font-size:0.8rem; color:var(--brand-cyan); font-weight:700; margin-top:0.2rem;">
+                  Lecturer &bull; IT Dept
+                </div>
+              </div>
+            </div>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem; flex-grow:1;">
               <strong>Institution:</strong> Sri Lanka Institute of Information Technology (SLIIT)<br>
               <strong>Domain Focus:</strong> Microservice API architecture, model fine-tuning workflows, and
               experimental baseline benchmarking.
             </p>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); margin-top:auto; padding-top:0.75rem; border-top:1px solid var(--border-color);">
+              ✉️ poorna.p@sliit.lk
+            </div>
           </div>
 
-          <div class="card" style="border-top:4px solid var(--brand-purple);">
-            <span class="badge badge-purple" style="margin-bottom:0.75rem;">External Field Expert</span>
-            <h3 style="font-size:1.35rem; margin-bottom:0.25rem;">Mrs. Anoma Gunarathna</h3>
-            <p style="font-size:0.85rem; color:var(--brand-purple); font-weight:700; margin-bottom:0.75rem;">
-              Agricultural Research Officer &bull; Phytosanitary Services
-            </p>
-            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem;">
+          <div class="card" style="border-top:4px solid var(--brand-purple); display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+              <div style="width:72px; height:72px; border-radius:var(--radius-full); overflow:hidden; flex-shrink:0; border:2px solid var(--brand-purple); background:var(--bg-tertiary); position:relative;">
+                <img src="documents/external_supervisor.jpg" alt="Mrs. Anoma Gunarathna" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--brand-purple), #7c3aed); color:#fff; font-size:1.4rem; font-weight:800;">A</span>
+              </div>
+              <div>
+                <span class="badge badge-purple" style="margin-bottom:0.35rem;">External Field Expert</span>
+                <h3 style="font-size:1.25rem; margin:0; line-height:1.3;">Mrs. Anoma Gunarathna</h3>
+                <div style="font-size:0.8rem; color:var(--brand-purple); font-weight:700; margin-top:0.2rem;">
+                  Agricultural Research Officer
+                </div>
+              </div>
+            </div>
+            <p style="font-size:0.875rem; color:var(--text-secondary); margin-bottom:1rem; flex-grow:1;">
               <strong>Institution:</strong> Department of Agriculture, Sri Lanka<br>
               <strong>Domain Focus:</strong> Rice cultivation field practices, paddy pathogen symptom verification, and
               qualitative evaluation of Grad-CAM heatmaps.
             </p>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted); margin-top:auto; padding-top:0.75rem; border-top:1px solid var(--border-color);">
+              🌱 Field Agronomy &amp; Pathogen Advisory
+            </div>
           </div>
         </div>
       </div>
@@ -272,7 +303,7 @@
     </div>
   </div>
 
-  <script src="js/data.js"></script>
+  <script src="js/data.js?v=2"></script>
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
 
@@ -284,7 +315,14 @@
       if (teamContainer && projectData.team) {
         teamContainer.innerHTML = projectData.team.map(m => `
           <div class="team-card">
-            <div class="team-avatar">${m.name.charAt(0)}</div>
+            <div class="team-avatar" style="overflow:hidden; padding:0; background:var(--bg-tertiary); position:relative;">
+              ${m.image ? `
+                <img src="${m.image}" alt="${m.name}" style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-full);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <span style="display:none; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--brand-forest), var(--brand-emerald)); color:#fff; font-size:1.5rem; font-weight:800;">${m.name.charAt(0)}</span>
+              ` : `
+                <span style="display:flex; width:100%; height:100%; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--brand-forest), var(--brand-emerald)); color:#fff; font-size:1.5rem; font-weight:800;">${m.name.charAt(0)}</span>
+              `}
+            </div>
             <div class="team-info" style="flex:1;">
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.35rem; flex-wrap:wrap; gap:0.25rem;">
                 <span class="badge badge-info">Component ${m.componentNumber}</span>
@@ -293,10 +331,12 @@
               <h3>${m.name}</h3>
               <div class="student-id">${m.studentId}</div>
               <div class="team-role">${m.role}</div>
-              <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">
-                <strong>Key Responsibilities:</strong><br>
-                ${m.responsibilities.join(' • ')}
-              </p>
+              ${m.responsibilities && m.responsibilities.length ? `
+                <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:0.75rem;">
+                  <strong>Key Responsibilities:</strong><br>
+                  ${m.responsibilities.join(' • ')}
+                </p>
+              ` : ''}
               <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
                 <strong>Shared Duties:</strong> ${m.sharedDuties}
               </div>

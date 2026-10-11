@@ -66,9 +66,20 @@ function initPresentationsPage() {
             <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="openPresentationModal('${p.id}')">
               View Outline
             </button>
-            <button class="btn btn-primary btn-sm" style="flex:1;" onclick="showDocumentNotice('${p.title}', '${p.status}', 'PRES-${p.number}')">
-              ${p.fileUrl ? 'Download Slides' : 'Slides (Pending)'}
-            </button>
+            ${p.fileUrl ? `
+              <a href="${p.fileUrl}" download="${p.fileUrl.split('/').pop()}" class="btn btn-primary btn-sm" style="flex:1; display:inline-flex; align-items:center; justify-content:center; text-decoration:none; gap:6px;" target="_blank">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download Slides
+              </a>
+            ` : `
+              <button class="btn btn-primary btn-sm" style="flex:1;" onclick="showDocumentNotice('${p.title}', '${p.status}', 'PRES-${p.number}')">
+                Slides (Pending)
+              </button>
+            `}
           </div>
         </div>
       `;
@@ -109,9 +120,13 @@ function openPresentationModal(presId) {
         <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
           <strong>Status:</strong> <span>${p.status}</span>
         </div>
-        <div style="display:flex; justify-content:space-between;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.35rem;">
           <strong>Slide Deck Volume:</strong> <span>${p.slidesCount}</span>
         </div>
+        ${p.fileUrl ? `
+        <div style="display:flex; justify-content:space-between; margin-top:0.35rem; padding-top:0.35rem; border-top:1px dashed var(--border-color);">
+          <strong>Document Attached:</strong> <span style="font-family:var(--font-mono); color:var(--brand-emerald); font-weight:600;">${p.fileUrl.split('/').pop()}</span>
+        </div>` : ''}
       </div>
 
       <h4 style="font-size: 1rem; margin-bottom: 0.75rem; color: var(--text-primary);">Detailed Agenda &amp; Defense Content</h4>
@@ -121,5 +136,41 @@ function openPresentationModal(presId) {
     `;
   }
 
+  const downloadSlot = document.getElementById('pres-modal-download-slot');
+  if (downloadSlot) {
+    if (p.fileUrl) {
+      downloadSlot.innerHTML = `
+        <a href="${p.fileUrl}" download="${p.fileUrl.split('/').pop()}" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none;" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download Slides
+        </a>
+      `;
+    } else {
+      downloadSlot.innerHTML = '';
+    }
+  }
+
   openModal('pres-outline-modal');
+}
+
+function downloadPresentation(presId) {
+  if (typeof projectData === 'undefined' || !projectData.presentations) return;
+  const p = projectData.presentations.find(item => item.id === presId);
+  if (!p) return;
+
+  if (p.fileUrl) {
+    const a = document.createElement('a');
+    a.href = p.fileUrl;
+    a.download = p.fileUrl.split('/').pop();
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  } else {
+    showDocumentNotice(p.title, p.status, 'PRES-' + p.number);
+  }
 }

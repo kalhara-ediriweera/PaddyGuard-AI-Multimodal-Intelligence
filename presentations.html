@@ -116,7 +116,7 @@
             <button class="filter-pill pres-filter-btn active" data-filter="all">All Decks</button>
             <button class="filter-pill pres-filter-btn" data-filter="completed">Completed Decks</button>
             <button class="filter-pill pres-filter-btn" data-filter="upcoming">Upcoming Reviews</button>
-            <button class="filter-pill pres-filter-btn" data-filter="pending">Final Viva Deck</button>
+
           </div>
         </div>
 
@@ -212,8 +212,9 @@
       <h3 id="pres-modal-title" style="font-size:1.35rem; margin-bottom:1rem; color:var(--text-primary);">Presentation
         Agenda</h3>
       <div id="pres-modal-body"></div>
-      <div style="margin-top:1.5rem; text-align:right;">
+      <div style="margin-top:1.5rem; display:flex; justify-content:flex-end; align-items:center; gap:0.75rem;">
         <button class="btn btn-secondary" onclick="closeModal('pres-outline-modal')">Close</button>
+        <span id="pres-modal-download-slot"></span>
       </div>
     </div>
   </div>

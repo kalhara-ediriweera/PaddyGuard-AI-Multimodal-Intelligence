@@ -42,6 +42,7 @@ const projectData = {
       department: "Department of Information Technology",
       institution: "Sri Lanka Institute of Information Technology (SLIIT)",
       expertise: "Machine Learning, Artificial Intelligence, Computational Systems",
+      image: "documents/supervisor.jpg",
       email: "nathali.s@sliit.lk"
     },
     coSupervisor: {
@@ -51,6 +52,7 @@ const projectData = {
       department: "Department of Information Technology",
       institution: "Sri Lanka Institute of Information Technology (SLIIT)",
       expertise: "Software Architecture, Deep Learning Experimental Design",
+      image: "documents/co_supervisor.jpg",
       email: "poorna.p@sliit.lk"
     },
     externalExpert: {
@@ -59,6 +61,7 @@ const projectData = {
       designation: "Agricultural Research Officer",
       institution: "Department of Agriculture, Sri Lanka",
       expertise: "Paddy Pathology, Pest Diagnostics & Cultivation Field Practices",
+      image: "documents/external_supervisor.jpg",
       email: "To be updated"
     }
   },
@@ -73,15 +76,10 @@ const projectData = {
       componentNumber: 1,
       componentTitle: "Voice-Based Rice Disease Diagnosis using Speech Recognition & NLP",
       weight: "25%",
+      image: "documents/member_1.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C1_IT22273680.pdf",
       technologies: ["OpenAI Whisper (large-v3)", "SentencePiece", "BERT / RoBERTa", "Sinhala TTS (Google/Coqui)", "PyTorch", "FastAPI"],
-      responsibilities: [
-        "Curating and annotating Sinhala spoken symptom corpus with 1,500+ voice recordings across Polonnaruwa, Kurunegala, Anuradhapura",
-        "Fine-tuning OpenAI Whisper ASR on agricultural vocabulary targeting Word Error Rate (WER) < 15%",
-        "Developing Sinhala Unicode normalization, SentencePiece tokenization, and agricultural Named Entity Recognition (NER)",
-        "Fine-tuning transformer classifiers (BERT/RoBERTa) for 4 disease categories achieving >= 85% accuracy",
-        "Engineering adaptive decision-tree dialogue module and Sinhala Text-to-Speech (TTS) voice advisory pipeline"
-      ],
+      
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22273680@my.sliit.lk"
     },
@@ -93,15 +91,10 @@ const projectData = {
       componentNumber: 2,
       componentTitle: "Rice Leaf Disease Classification with Out-of-Distribution Detection",
       weight: "25%",
+      image: "documents/member_2.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C2_IT22168740.pdf",
       technologies: ["ResNet50", "EfficientNetB3", "DenseNet121", "ODIN", "Mahalanobis Distance", "OpenMax", "Grad-CAM", "PyTorch"],
-      responsibilities: [
-        "Curating and balancing 4-class rice leaf disease dataset (Bacterial Blight, Leaf Blast, Brown Spot, Healthy)",
-        "Benchmarking transfer learning CNN backbones (ResNet50, EfficientNetB3, DenseNet121) on mobile inference efficiency",
-        "Integrating OOD detection methods (ODIN, Mahalanobis, OpenMax) to reject non-rice foliage, weeds, and unseen diseases",
-        "Generating Grad-CAM visual activation heatmaps to verify biological lesion attention and cultivate farmer trust",
-        "Exporting optimized lightweight models (TensorFlow Lite / ONNX) for edge and server-side deployment"
-      ],
+      
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22168740@my.sliit.lk"
     },
@@ -113,15 +106,10 @@ const projectData = {
       componentNumber: 3,
       componentTitle: "Hybrid AI and Knowledge-Based Rice Treatment Recommendation & Advisory Chatbot",
       weight: "25%",
+      image: "documents/member_3.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C3_IT22303820.pdf",
       technologies: ["Retrieval-Augmented Generation (RAG)", "FAISS / MongoDB Atlas Vector Search", "LangChain / Transformers", "Deterministic Rule Engine", "Dosage Engine", "FastAPI / Node.js"],
-      responsibilities: [
-        "Engineering structured agricultural knowledge base from IRRI Rice Knowledge Bank, FAO guidelines, and DOA Sri Lanka manuals",
-        "Building semantic vector database and domain-grounded RAG retrieval pipeline for context-aware treatment advice",
-        "Formulating deterministic expert rules to strictly validate and verify chemical and biological treatments against hallucinations",
-        "Developing calibrated land acreage-to-dosage chemical calculation algorithms for 16L knapsack sprayers",
-        "Integrating conversational chatbot interface consuming diagnostic outcomes from C1, C2, and C4"
-      ],
+      
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22303820@my.sliit.lk"
     },
@@ -133,15 +121,9 @@ const projectData = {
       componentNumber: 4,
       componentTitle: "Rice Pest Detection using Deep Learning with Out-of-Distribution Detection",
       weight: "25%",
+      image: "documents/member_4.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C4_IT22065858.pdf",
       technologies: ["YOLOv8", "ResNet50", "EfficientNet", "ODIN / Mahalanobis", "PyTorch / TensorFlow", "OpenCV"],
-      responsibilities: [
-        "Curating representative rice pest datasets (IP102 benchmark, local field imagery) for common paddy insect threats",
-        "Training deep learning & object detection models (YOLOv8, ResNet) for small insect pests in cluttered field foliage",
-        "Integrating Out-of-Distribution (OOD) screening to reject unfamiliar insects and non-pest field photos",
-        "Evaluating model precision, recall, and detection speed under complex foliage backgrounds and varying illumination",
-        "Formulating pest diagnostic alert payloads, threshold calibrations, and commercialization roadmap"
-      ],
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22065858@my.sliit.lk"
     }
@@ -382,7 +364,7 @@ const projectData = {
       name: "Progress Presentation 1",
       assessment: "Progress Review 1 (PP1)",
       status: "Completed",
-      date: "To be updated",
+      date: "May 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
       description: "Evaluation of initial dataset curation, data augmentation pipelines, baseline CNN and NLP architecture implementations, initial OOD threshold explorations, and vector store structuring.",
@@ -395,7 +377,7 @@ const projectData = {
       name: "Progress Presentation 2",
       assessment: "Progress Review 2 (PP2)",
       status: "Completed",
-      date: "To be updated",
+      date: "Auguest 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
       description: "Review of end-to-end component integration, OOD calibration, Grad-CAM explainability, UI/UX demo video verification, deployment reports, and preliminary field testing.",
@@ -407,8 +389,8 @@ const projectData = {
       number: "04",
       name: "Final Assessment",
       assessment: "Final Dissertation & Code Submission",
-      status: "Pending",
-      date: "To be updated",
+      status: "Upcoming",
+      date: "October 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
       description: "Submission of the final research thesis, comprehensive experimental results, statistical comparisons across all four components, complete production codebase, and deployment documentation.",
@@ -420,8 +402,8 @@ const projectData = {
       number: "05",
       name: "Viva Voce",
       assessment: "Final Oral Defense & System Demonstration",
-      status: "Pending",
-      date: "To be updated",
+      status: "Upcoming",
+      date: "October 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
       description: "Rigorous oral defense of the research contributions before internal and external examiners, live demonstration of multimodal capabilities, OOD rejection tests, and academic query defense.",
@@ -502,8 +484,8 @@ const projectData = {
       category: "Check List documents",
       description: "Official software engineering checklist deliverable confirming version control structure, branch policies, and initial microservices commit history.",
       author: "PaddyGuard AI Research Team",
-      fileUrl: "",
-      status: "To be updated"
+      fileUrl: "documents/Checklist 1.pdf",
+      status: "Available"
     },
     {
       id: "doc-8",
@@ -512,8 +494,8 @@ const projectData = {
       category: "Check List documents",
       description: "Software engineering checklist deliverable detailing recorded walkthrough demonstration of multimodal UI, voice input, image upload, and advisory responses.",
       author: "PaddyGuard AI Research Team",
-      fileUrl: "",
-      status: "To be updated"
+      fileUrl: "documents/Checklist 2.pdf",
+      status: "Available"
     },
     {
       id: "doc-9",
@@ -525,56 +507,47 @@ const projectData = {
       fileUrl: "",
       status: "To be updated"
     },
-    {
-      id: "doc-10",
-      title: "Final Document: Consolidated Research Dissertation",
-      code: "SE-FINAL-MAIN",
-      category: "Final Document",
-      description: "Main undergraduate dissertation synthesizing all four research streams, empirical benchmarks, statistical comparisons, and future roadmap.",
-      author: "PaddyGuard AI Research Team",
-      fileUrl: "",
-      status: "Pending final submission"
-    },
+
     {
       id: "doc-11",
-      title: "Final Document: Component 1 Report (Voice Diagnosis)",
+      title: "Final Document: Final Report",
       code: "SE-FINAL-C1",
       category: "Final Document",
-      description: "Final specialized technical report covering Sinhala speech recognition, BERT classification, and audio evaluation metrics.",
-      author: "Weerasinghe KGJP (IT22273680)",
-      fileUrl: "",
-      status: "Pending final submission"
-    },
-    {
-      id: "doc-12",
-      title: "Final Document: Component 2 Report (Leaf Disease & OOD)",
-      code: "SE-FINAL-C2",
-      category: "Final Document",
-      description: "Final specialized technical report covering CNN benchmarks, ODIN/OpenMax thresholds, Grad-CAM reviews, and accuracy evaluations.",
-      author: "Hewanayake H.M.L.M (IT22168740)",
-      fileUrl: "",
-      status: "Pending final submission"
-    },
-    {
-      id: "doc-13",
-      title: "Final Document: Component 3 Report (Treatment Advisory & RAG)",
-      code: "SE-FINAL-C3",
-      category: "Final Document",
-      description: "Final specialized technical report covering RAG pipeline evaluation, deterministic safety verification, and dosage calculation findings.",
-      author: "Keshan B K (IT22303820)",
-      fileUrl: "",
-      status: "Pending final submission"
-    },
-    {
-      id: "doc-14",
-      title: "Final Document: Component 4 Report (Pest Detection & OOD)",
-      code: "SE-FINAL-C4",
-      category: "Final Document",
-      description: "Final specialized technical report covering YOLOv8 pest detection mAP, unknown insect rejection rates, and field robustness.",
-      author: "Kalhara E P K (IT22065858)",
+      description: "Final research report covering all team members’ contributions, methodologies, and evaluation results across Sinhala speech recognition, BERT classification, and audio performance.",
+      author: "All Members",
       fileUrl: "",
       status: "Pending final submission"
     }
+    // {
+    //   id: "doc-12",
+    //   title: "Final Document: Component 2 Report (Leaf Disease & OOD)",
+    //   code: "SE-FINAL-C2",
+    //   category: "Final Document",
+    //   description: "Final specialized technical report covering CNN benchmarks, ODIN/OpenMax thresholds, Grad-CAM reviews, and accuracy evaluations.",
+    //   author: "Hewanayake H.M.L.M (IT22168740)",
+    //   fileUrl: "",
+    //   status: "Pending final submission"
+    // },
+    // {
+    //   id: "doc-13",
+    //   title: "Final Document: Component 3 Report (Treatment Advisory & RAG)",
+    //   code: "SE-FINAL-C3",
+    //   category: "Final Document",
+    //   description: "Final specialized technical report covering RAG pipeline evaluation, deterministic safety verification, and dosage calculation findings.",
+    //   author: "Keshan B K (IT22303820)",
+    //   fileUrl: "",
+    //   status: "Pending final submission"
+    // },
+    // {
+    //   id: "doc-14",
+    //   title: "Final Document: Component 4 Report (Pest Detection & OOD)",
+    //   code: "SE-FINAL-C4",
+    //   category: "Final Document",
+    //   description: "Final specialized technical report covering YOLOv8 pest detection mAP, unknown insect rejection rates, and field robustness.",
+    //   author: "Kalhara E P K (IT22065858)",
+    //   fileUrl: "",
+    //   status: "Pending final submission"
+    // }
   ],
 
   // Presentations matching Slide 13
@@ -586,9 +559,9 @@ const projectData = {
       occasion: "Initial Project Defense & Approval",
       date: "March 2026",
       status: "Completed",
-      slidesCount: "28 Slides",
+      slidesCount: "31 Slides",
       description: "Initial research defense presenting PaddyGuard AI's multimodal scope across foliar diseases, pests, voice diagnosis, RAG advisory, and OOD necessity.",
-      fileUrl: "",
+      fileUrl: "documents/R26-SE-015_Proposal-Presentation.pdf",
       topics: [
         "Socioeconomic Importance of Paddy in Sri Lanka",
         "Limitations of Closed-World Classifiers (Leaf & Pest)",
@@ -602,11 +575,11 @@ const projectData = {
       number: "02",
       title: "Progress Presentation-1",
       occasion: "Interim Milestone Review 1 (PP1)",
-      date: "To be updated",
-      status: "Upcoming",
-      slidesCount: "To be updated",
+      date: "May 2026",
+      status: "Completed",
+      slidesCount: "21 Slides",
       description: "Scheduled defense demonstrating baseline CNN and YOLOv8 training, initial Sinhala speech transcription experiments, and knowledge base vectorization.",
-      fileUrl: "",
+      fileUrl: "documents/PP1-Presentation.pdf",
       topics: [
         "Dataset Preparation (Kaggle benchmarks & local collections)",
         "Comparative Baseline Training (ResNet50 vs EfficientNet vs YOLOv8)",
@@ -619,11 +592,11 @@ const projectData = {
       number: "03",
       title: "Progress Presentation-2",
       occasion: "Interim Milestone Review 2 (PP2)",
-      date: "To be updated",
-      status: "Upcoming",
-      slidesCount: "To be updated",
+      date: "August 2026",
+      status: "Completed",
+      slidesCount: "8 Slides",
       description: "Scheduled defense reviewing end-to-end integration, OOD threshold tuning, Grad-CAM visual verification, UI/UX demo video, and deployment profiling.",
-      fileUrl: "",
+      fileUrl: "documents/PP2-Presentation.pdf",
       topics: [
         "OOD Benchmark Rejection Rates (AUROC, FPR95)",
         "Grad-CAM Lesion Heatmap Evaluation with Agricultural Officers",
@@ -637,7 +610,7 @@ const projectData = {
       title: "Final Presentation (Viva)",
       occasion: "Final Undergraduate Thesis Defense",
       date: "To be updated",
-      status: "Pending",
+      status: "Upcoming",
       slidesCount: "To be updated",
       description: "Comprehensive oral defense and live system demonstration across all four components before internal and external examiners.",
       fileUrl: "",

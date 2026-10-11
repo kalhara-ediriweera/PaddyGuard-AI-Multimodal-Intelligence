@@ -71,8 +71,12 @@ img, svg, canvas, video {
 
 /* ==================== 2. LARGE TABLETS (<= 1024px) ==================== */
 @media (max-width: 1024px) {
-  .hero-title {
+  .hero-title-main {
     font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.45rem;
   }
 
   .hero-grid {
@@ -353,9 +357,14 @@ img, svg, canvas, video {
     padding: 2.75rem 0 2rem 0;
   }
 
-  .hero-title {
-    font-size: 1.85rem;
+  .hero-title-main {
+    font-size: 2rem;
     line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.35;
   }
 
   .hero-lead {
@@ -478,8 +487,12 @@ img, svg, canvas, video {
     padding-right: 0.75rem;
   }
 
-  .hero-title {
-    font-size: 1.55rem;
+  .hero-title-main {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
   }
 
   .page-title {

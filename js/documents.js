@@ -119,7 +119,13 @@ function handleDocAction(docId, action) {
   if (!doc) return;
 
   if (action === 'download' && doc.fileUrl) {
-    window.open(doc.fileUrl, '_blank');
+    const a = document.createElement('a');
+    a.href = doc.fileUrl;
+    a.download = doc.fileUrl.split('/').pop();
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   } else {
     showDocumentNotice(doc.title, doc.status, doc.code);
   }
