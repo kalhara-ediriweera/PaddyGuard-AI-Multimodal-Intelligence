@@ -120,7 +120,7 @@
           <a href="#research-objectives" class="sub-nav-link">4. Research Objectives</a>
           <a href="#methodology" class="sub-nav-link">5. Methodology</a>
           <a href="#technologies-used" class="sub-nav-link">6. Technologies Used</a>
-          
+
         </div>
       </div>
     </nav>
@@ -143,11 +143,10 @@
             <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">1. Deep Learning for Rice Leaf Disease Classification
             </h3>
             <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
-              Mohanty et al. [6] achieved 99.35% accuracy using AlexNet on PlantVillage, while Lu et al. [7] designed a
-              CNN achieving 94.7% specifically for rice diseases. Chen et al. [8] showed that <em>EfficientNet</em>
-              architectures (EfficientNetB3/B4) achieve comparable accuracy to ResNet models with significantly fewer
-              parameters. However, Ferentinos [9] highlighted that accuracy sharply drops on real field images, and none
-              of these models incorporate Out-of-Distribution rejection mechanisms to handle non-rice foliage.
+              Deep learning models such as CNNs and EfficientNetB3 enable accurate rice leaf disease classification.
+              However, conventional classifiers may misclassify unfamiliar or non-rice images. This research integrates
+              energy-based Out-of-Distribution (OOD) detection, Grad-CAM explanations, and uncertainty-based active
+              learning to improve diagnostic reliability, interpretability, and robustness.
             </p>
           </div>
 
@@ -157,7 +156,12 @@
             <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">2. Deep Learning &amp; YOLO for Rice Pest Detection
             </h3>
             <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
-              Rice pest infestations threaten crop productivity and food security. CNNs have demonstrated strong capabilities in extracting visual features for pest classification (Hu et al. [5]), while improved YOLOv8 models support efficient, real-time pest detection (Zheng et al. [3]). However, conventional systems often struggle to recognize unfamiliar insects. This research integrates comparative CNN evaluation and Out-of-Distribution (OOD) detection to improve prediction reliability and reduce incorrect pest identification.
+              Rice pest infestations threaten crop productivity and food security. CNNs have demonstrated strong
+              capabilities in extracting visual features for pest classification (Hu et al. [5]), while improved YOLOv8
+              models support efficient, real-time pest detection (Zheng et al. [3]). However, conventional systems often
+              struggle to recognize unfamiliar insects. This research integrates comparative CNN evaluation and
+              Out-of-Distribution (OOD) detection to improve prediction reliability and reduce incorrect pest
+              identification.
             </p>
           </div>
 
@@ -180,11 +184,10 @@
             <h3 style="font-size:1.25rem; margin-bottom:0.5rem;">4. RAG Chatbots &amp; Out-of-Distribution Reliability
             </h3>
             <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
-              Lewis et al. [16] pioneered Retrieval-Augmented Generation (RAG) to ground LLMs in authoritative
-              knowledge. In agriculture, unconstrained LLMs hallucinate illegal pesticides or toxic dosage levels. For
-              reliability, Liang et al. [10] (ODIN), Lee et al. [11] (Mahalanobis Distance), and Bendale &amp; Boult
-              [12] (OpenMax) established mathematical frameworks to reject out-of-distribution inputs. Selvaraju et al.
-              [13] introduced Grad-CAM for visual saliency verification.
+              Retrieval-Augmented Generation (RAG) improves chatbot responses by grounding language models in retrieved
+              knowledge. PaddyGuard AI uses a Pinecone vector database and GPT-4o-mini via OpenRouter to provide rice
+              disease and pest management guidance. Topic-scope checking and prompt-based safeguards support relevant
+              responses, but agricultural expert validation is needed to assess reliability and treatment safety.
             </p>
           </div>
         </div>
@@ -324,13 +327,15 @@
             <span class="badge badge-info" style="margin-bottom:0.5rem;">Component 1 (25% Weight)</span>
             <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Voice-Based Symptom Diagnosis</h4>
             <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
-              <li>Collect and curate a dedicated Sinhala spoken symptom description corpus from rural farmer interviews.
+              <li>Implement Sinhala speech-to-text transcription using a Whisper-based Automatic Speech Recognition
+                (ASR) model.</li>
+              <li>Extract agricultural symptoms using TF-IDF and NLP-based classification techniques.</li>
+              <li>Compare traditional machine learning classifiers with BERT-based models for rice disease diagnosis.
               </li>
-              <li>Implement and evaluate speech-to-text transcription using Whisper and Vosk models.</li>
-              <li>Extract clinical symptom entities via TF-IDF and compare BERT text classification against traditional
-                ML baselines.</li>
-              <li>Synthesize diagnostic summaries and guidance into natural Sinhala audio (TTS) for low-literacy users.
-              </li>
+              <li>Integrate Out-of-Distribution (OOD) detection and interactive follow-up questions to handle unfamiliar
+                inputs and uncertain predictions.</li>
+              <li>Generate Sinhala diagnostic summaries and voice feedback using Text-to-Speech (TTS) to improve
+                accessibility for farmers.</li>
             </ul>
           </div>
 
@@ -339,13 +344,13 @@
             <span class="badge badge-success" style="margin-bottom:0.5rem;">Component 2 (25% Weight)</span>
             <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Rice Leaf Disease Classification + OOD</h4>
             <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
-              <li>Curate a balanced 4-class foliar dataset (Bacterial Blight, Leaf Blast, Brown Spot, Healthy) with
-                non-rice OOD probe sets.</li>
-              <li>Benchmark transfer-learning CNN backbones (ResNet50, EfficientNetB3, DenseNet121) targeting &gt; 92%
-                accuracy.</li>
-              <li>Calibrate ODIN, Mahalanobis Distance, and OpenMax to achieve an OOD rejection rate &gt; 85% at FPR95.
-              </li>
-              <li>Generate Grad-CAM heatmaps to visually verify that predictions attend to biologically meaningful
+              <li>Curate a balanced four-class rice leaf disease dataset covering Bacterial Blight, Leaf Blast, Brown
+                Spot, and Healthy leaves, with non-rice near-OOD probe sets.</li>
+              <li>Fine-tune an EfficientNetB3 transfer-learning model, achieving 97.85% classification accuracy.</li>
+              <li>Evaluate Maximum Softmax Probability and Energy-based OOD detection methods with Optuna-based
+                threshold tuning.</li>
+              <li>Assess OOD rejection performance to identify non-rice and unfamiliar inputs reliably.</li>
+              <li>Generate Grad-CAM heatmaps to verify that model predictions focus on biologically meaningful leaf
                 lesion regions.</li>
             </ul>
           </div>
@@ -369,12 +374,12 @@
             <span class="badge badge-purple" style="margin-bottom:0.5rem;">Component 3 (25% Weight)</span>
             <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Treatment Advisory &amp; RAG Chatbot</h4>
             <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
-              <li>Construct a vectorized agricultural knowledge repository from IRRI Rice Knowledge Bank, FAO, and DOA
-                Sri Lanka guidelines.</li>
-              <li>Implement semantic similarity retrieval using FAISS/ChromaDB paired with LLM response generation.</li>
-              <li>Formulate deterministic expert rules to strictly validate and verify chemical and biological treatment
-                options.</li>
-              <li>Develop a calibrated land acreage-to-dosage sprayer calculator to prevent agrochemical misuse.</li>
+              <li>Build a vectorized agricultural knowledge base using rice disease and pest management resources.</li>
+              <li>Implement semantic retrieval using a Pinecone vector database, BGE-large embeddings, and LLM-based
+                response generation.</li>
+              <li>Integrate topic-scope checking, language handling, and follow-up questions to improve response
+                relevance.</li>
+              <li>Develop a frontend land-area-based dosage calculator to support treatment-related calculations.</li>
             </ul>
           </div>
         </div>
@@ -444,11 +449,14 @@
             <span class="badge badge-info" style="margin-bottom:0.5rem;">C1: Voice NLP</span>
             <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Speech &amp; Language</h4>
             <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>Whisper &bull; Vosk ASR</li>
+              <li>Whisper Small Sinhala ASR</li>
               <li>TF-IDF &bull; Scikit-learn</li>
-              <li>BERT &bull; RoBERTa</li>
-              <li>PyTorch &bull; Hugging Face</li>
-              <li>Coqui &bull; Sinhala TTS</li>
+              <li>Random Forest &bull; SVM &bull; Logistic Regression &bull; Naive Bayes</li>
+              <li>BERT &bull; DistilBERT</li>
+              <li>PyTorch &bull; Hugging Face Transformers</li>
+              <li>OOD Detection &bull; Confidence-Based Follow-Up</li>
+              <li>Sinhala Text-to-Speech (TTS)</li>
+              <li>Python &bull; FastAPI</li>
             </ul>
           </div>
 
@@ -456,10 +464,9 @@
             <span class="badge badge-success" style="margin-bottom:0.5rem;">C2: Leaf Vision</span>
             <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Disease &amp; OOD</h4>
             <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>ResNet50 &bull; EfficientNetB3</li>
-              <li>DenseNet121 &bull; PyTorch</li>
-              <li>ODIN &bull; Mahalanobis Dist</li>
-              <li>OpenMax (EVT Weibull)</li>
+              <li>EfficientNetB3 &bull; PyTorch</li>
+              <li>MSP &bull; Energy-based OOD</li>
+              <li>Optuna &bull; Active Learning</li>
               <li>Grad-CAM &bull; OpenCV</li>
             </ul>
           </div>
@@ -480,11 +487,11 @@
             <span class="badge badge-purple" style="margin-bottom:0.5rem;">C3: Advisory &amp; RAG</span>
             <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Knowledge &amp; Rules</h4>
             <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>Retrieval-Augmented Gen</li>
-              <li>FAISS &bull; ChromaDB</li>
-              <li>Llama / OpenAI API</li>
-              <li>Expert Rule Engine</li>
-              <li>FastAPI &bull; PostgreSQL</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>Pinecone Vector Database</li>
+              <li>BGE-large Embeddings</li>
+              <li>GPT-4o-mini &bull; OpenRouter API</li>
+              <li>Node.js &bull; Express.js</li>
             </ul>
           </div>
         </div>

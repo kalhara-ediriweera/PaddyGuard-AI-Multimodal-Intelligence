@@ -116,12 +116,10 @@
           </div>
           <h1 class="hero-title">
             <span class="gradient-text">PaddyGuard AI</span><br>
-            Multimodal Intelligence for Rice Disease &amp; Pest Management
+            <h2>Multimodal Intelligence for Rice Disease &amp; Pest Management</h2>
           </h1>
           <p class="hero-lead">
-            An integrated research platform combining deep learning foliar disease classification, field pest detection,
-            Sinhala voice-based symptom understanding, Out-of-Distribution (OOD) reliability screening, and
-            knowledge-driven agricultural advisory.
+
           </p>
 
           <div class="hero-abstract-card">
@@ -281,9 +279,10 @@
             <h3 class="component-title">Voice-Based Rice Disease Diagnosis</h3>
             <div class="component-lead-by">Lead: Weerasinghe KGJP (IT22273680)</div>
             <p class="component-desc">
-              Allows smallholder farmers to verbally describe observed crop symptoms in Sinhala. Converts spoken speech
-              into text (Whisper/Vosk), extracts clinical symptom keywords using TF-IDF, and classifies the foliar
-              disease via BERT with synthesized Sinhala voice feedback.
+              Enables Sri Lankan farmers to describe rice crop symptoms in Sinhala. Uses Whisper-based speech
+              recognition and NLP to identify diseases such as Bacterial Blight, Brown Spot, and Leaf Blast. Includes
+              OOD detection, interactive follow-up questions, and Sinhala text and voice feedback for accessible and
+              reliable diagnosis.
             </p>
             <div class="component-tech-pills">
               <span class="tech-pill">Whisper / Vosk</span>
@@ -313,9 +312,9 @@
             <h3 class="component-title">Rice Leaf Disease Classification + OOD</h3>
             <div class="component-lead-by">Lead: Hewanayake H.M.L.M (IT22168740)</div>
             <p class="component-desc">
-              Identifies foliar rice diseases from images using transfer learning CNNs (ResNet50, EfficientNetB3,
-              DenseNet121). Implements Out-of-Distribution (OOD) screening via ODIN and OpenMax to reject non-rice
-              leaves and soil, verified by Grad-CAM visual heatmaps.
+              Identifies foliar rice diseases from images using a transfer-learning EfficientNetB3 CNN. Implements
+              Out-of-Distribution (OOD) screening with energy and maximum-softmax scores and a three-state decision
+              (Known / Uncertain / OOD) to reject non-rice leaves and soil, explained with Grad-CAM visual heatmaps.
             </p>
             <div class="component-tech-pills">
               <span class="tech-pill">ResNet50</span>
@@ -377,9 +376,11 @@
             <h3 class="component-title">Treatment Advisory &amp; RAG Chatbot</h3>
             <div class="component-lead-by">Lead: Keshan B K (IT22303820)</div>
             <p class="component-desc">
-              A dual-layered decision support system combining Retrieval-Augmented Generation (RAG) over verified IRRI
-              &amp; FAO literature with deterministic expert rules and a land acreage dosage calculator to prevent
-              pesticide hallucinations.
+              PaddyGuard AI integrates Retrieval-Augmented Generation (RAG) with an LLM to provide rice disease and pest
+              management guidance. It uses a Pinecone vector database containing 1,271 records, BGE-large embeddings,
+              and GPT-4o-mini via OpenRouter to generate context-aware responses. Topic validation, language handling,
+              and a dosage calculator support accessible treatment guidance, although expert validation is still
+              required to ensure recommendation safety and reliability.
             </p>
             <div class="component-tech-pills">
               <span class="tech-pill">RAG Pipeline</span>
