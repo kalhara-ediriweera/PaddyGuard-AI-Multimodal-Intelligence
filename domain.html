@@ -360,12 +360,13 @@
             <span class="badge badge-warning" style="margin-bottom:0.5rem;">Component 4 (25% Weight)</span>
             <h4 style="font-size:1.15rem; margin-bottom:0.5rem;">Rice Pest Detection + OOD</h4>
             <ul style="padding-left:1.25rem; font-size:0.875rem; color:var(--text-secondary); line-height:1.65;">
-              <li>Curate representative paddy insect datasets from IP02 and agricultural repositories.</li>
-              <li>Train and evaluate deep detection models (YOLOv8, ResNet50) for Brown Planthopper, Stem Borer, Leaf
-                Folder, Gall Midge.</li>
-              <li>Implement OOD detection mechanisms to identify and reject unknown insects not belonging to the paddy
-                pest taxonomy.</li>
-              <li>Benchmark precision, recall, and detection latency under complex field foliage backgrounds.</li>
+              <li>Curate and preprocess rice pest image datasets, including image quality assessment.</li>
+              <li>Train and compare five deep learning models, selecting DenseNet121 as the best-performing model with
+                93% accuracy.</li>
+              <li>Apply fine-tuning to improve model performance and support the addition of new pest classes.</li>
+              <li>Generate Grad-CAM heatmaps to visualize important image regions influencing model predictions.</li>
+              <li>Integrate Out-of-Distribution (OOD) detection to identify unfamiliar insects outside the trained pest
+                classes.</li>
             </ul>
           </div>
 
@@ -433,74 +434,390 @@
       </div>
     </section>
 
-    <!-- ==================== 6. TECHNOLOGIES USED ==================== -->
+    <!-- ==================== 06. TECH STACK / TECHNOLOGIES USED ==================== -->
     <section class="section" style="background:var(--bg-secondary);" id="technologies-used">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Section 6</span>
-          <h2 class="section-title">Technologies Used</h2>
+          <span class="section-tag">06. TECH STACK</span>
+          <h2 class="section-title">Tools &amp; Technologies Used</h2>
           <p class="section-subtitle">
-            Core open-source libraries, deep learning frameworks, and platforms powering the system
+            Comprehensive technology ecosystem powering multimodal perception, out-of-distribution detection, reasoning,
+            and deployment across PaddyGuard AI
           </p>
         </div>
 
-        <div class="grid grid-4">
-          <div class="card">
-            <span class="badge badge-info" style="margin-bottom:0.5rem;">C1: Voice NLP</span>
-            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Speech &amp; Language</h4>
-            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>Whisper Small Sinhala ASR</li>
-              <li>TF-IDF &bull; Scikit-learn</li>
-              <li>Random Forest &bull; SVM &bull; Logistic Regression &bull; Naive Bayes</li>
-              <li>BERT &bull; DistilBERT</li>
-              <li>PyTorch &bull; Hugging Face Transformers</li>
-              <li>OOD Detection &bull; Confidence-Based Follow-Up</li>
-              <li>Sinhala Text-to-Speech (TTS)</li>
-              <li>Python &bull; FastAPI</li>
-            </ul>
+        <div class="tech-stack-grid">
+          <!-- Card 1 — Frontend Development -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Monitor / Browser Window icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">Frontend Development</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- React Logo -->
+                  <svg viewBox="-11.5 -10.23174 23 20.46348">
+                    <circle cx="0" cy="0" r="2.05" fill="#00d8ff"></circle>
+                    <g stroke="#00d8ff" stroke-width="1" fill="none">
+                      <ellipse rx="11" ry="4.2"></ellipse>
+                      <ellipse rx="11" ry="4.2" transform="rotate(60)"></ellipse>
+                      <ellipse rx="11" ry="4.2" transform="rotate(120)"></ellipse>
+                    </g>
+                  </svg>
+                </span>
+                React.js
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- JavaScript Logo -->
+                  <svg viewBox="0 0 24 24" fill="#F7DF1E">
+                    <rect width="24" height="24" rx="3" fill="#F7DF1E" />
+                    <path
+                      d="M7.5 18c0-1.8.8-2.6 2.3-2.6.4 0 .9.1 1.2.2v1.5c-.3-.1-.6-.2-.9-.2-.7 0-1 .4-1 1.3v4.3H7.5V18zm6.3 3.6c.4.3.9.5 1.5.5.7 0 1.1-.3 1.1-.8 0-.5-.4-.7-1.3-1-1.3-.4-2-.9-2-2.1 0-1.4 1.1-2.3 2.8-2.3.7 0 1.3.2 1.8.4l-.5 1.5c-.4-.2-.8-.4-1.3-.4-.7 0-1 .3-1 .7 0 .5.4.7 1.3 1 1.4.5 2 1 2 2.2 0 1.5-1.1 2.4-2.9 2.4-.8 0-1.6-.2-2.1-.5l.6-1.6z"
+                      fill="#000000" />
+                  </svg>
+                </span>
+                JavaScript
+              </span>
+
+            </div>
           </div>
 
-          <div class="card">
-            <span class="badge badge-success" style="margin-bottom:0.5rem;">C2: Leaf Vision</span>
-            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Disease &amp; OOD</h4>
-            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>EfficientNetB3 &bull; PyTorch</li>
-              <li>MSP &bull; Energy-based OOD</li>
-              <li>Optuna &bull; Active Learning</li>
-              <li>Grad-CAM &bull; OpenCV</li>
-            </ul>
+          <!-- Card 2 — Backend & Microservices -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Server Stack icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">Backend &amp; Microservices</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Python Logo -->
+                  <svg viewBox="0 0 24 24">
+                    <path fill="#387EB8"
+                      d="M11.9 2c-3.1 0-5.1.7-5.1 2.4v1.8h5.3v.8H4.6C2.6 7 1 8.7 1 11.2c0 2.4 1.4 3.7 3.6 3.7h1.4v-1.9c0-1.8 1.5-3.3 3.4-3.3h5.4c1.5 0 2.8-1.2 2.8-2.7V4.4C17.6 2.7 15 2 11.9 2zm-1.8 1.5c.5 0 .9.4.9.9 0 .5-.4.9-.9.9-.5 0-.9-.4-.9-.9 0-.5.4-.9.9-.9z" />
+                    <path fill="#FFE052"
+                      d="M12.1 22c3.1 0 5.1-.7 5.1-2.4v-1.8h-5.3v-.8h7.5c2 0 3.6-1.7 3.6-4.2 0-2.4-1.4-3.7-3.6-3.7H18v1.9c0 1.8-1.5 3.3-3.4 3.3H9.2c-1.5 0-2.8 1.2-2.8 2.7v2.8c0 1.7 2.6 2.4 5.7 2.4zm1.8-1.5c-.5 0-.9-.4-.9-.9 0-.5.4-.9.9-.9.5 0 .9.4.9.9 0 .5-.4.9-.9.9z" />
+                  </svg>
+                </span>
+                Python &amp; FastAPI
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Node.js Logo -->
+                  <svg viewBox="0 0 24 24" fill="#339933">
+                    <path
+                      d="M12 2L3 7.2v10.4L12 22.8l9-5.2V7.2L12 2zm-1.1 16.5c-2.8 0-4.1-1.3-4.1-3.6h1.9c0 1.3.7 1.9 2.2 1.9 1.4 0 2-.6 2-1.5 0-.9-.6-1.2-2.2-1.5-2.3-.4-3.6-1.1-3.6-2.9 0-2.1 1.7-3.2 3.8-3.2 2.6 0 3.8 1.3 3.8 3.2h-1.9c0-1.1-.6-1.6-1.9-1.6-1.2 0-1.8.5-1.8 1.3 0 .8.5 1.1 2.1 1.4 2.5.4 3.7 1.2 3.7 3 0 2.2-1.6 3.5-3.9 3.5z" />
+                  </svg>
+                </span>
+                Node.js &amp; Express.js
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                  </svg>
+                </span>
+                REST APIs
+              </span>
+            </div>
           </div>
 
-          <div class="card">
-            <span class="badge badge-warning" style="margin-bottom:0.5rem;">C4: Pest Vision</span>
-            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Pest &amp; Localization</h4>
-            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>YOLOv8 &bull; Ultralytics</li>
-              <li>ResNet50 &bull; EfficientNet</li>
-              <li>OOD Rejection Gate</li>
-              <li>OpenCV &bull; NumPy</li>
-              <li>TensorFlow / PyTorch</li>
-            </ul>
+          <!-- Card 3 — Database & Deployment -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Database / Cloud icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">Database &amp; Deployment</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- MongoDB Leaf Logo -->
+                  <svg viewBox="0 0 24 24" fill="#47A248">
+                    <path
+                      d="M12.16 0C11.9 0 11.7.1 11.5.3 9.4 2.2 4.6 7.4 4.6 13.5c0 5 3.3 9.3 7.3 10.5.3.1.5.1.7 0 4-1.2 7.3-5.5 7.3-10.5 0-6.1-4.8-11.3-6.9-13.2-.2-.2-.4-.3-.7-.3h-.14zm-.2 2.4c1.7 1.8 5.4 6 5.4 11.1 0 4.2-2.5 7.8-5.4 9-2.9-1.2-5.4-4.8-5.4-9 0-5.1 3.7-9.3 5.4-11.1z" />
+                  </svg>
+                </span>
+                MongoDB
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Pinecone Vector Logo -->
+                  <svg viewBox="0 0 24 24" fill="#059669">
+                    <path
+                      d="M12 2L4 6.5v11L12 22l8-4.5v-11L12 2zm0 3.2l5.5 3.1-5.5 3.1-5.5-3.1L12 5.2zm-6 5.5l5 2.8v5.6l-5-2.8v-5.6zm12 5.6l-5 2.8v-5.6l5-2.8v5.6z" />
+                  </svg>
+                </span>
+                Pinecone
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Railway Logo -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M10.875 1.5C5.7 1.5 1.5 5.7 1.5 10.875c0 4.125 2.663 7.613 6.375 8.813V15.75c-1.8-.675-3-2.4-3-4.425a4.72 4.72 0 0 1 4.725-4.725c1.613 0 3.038.825 3.863 2.063l1.875-1.088A6.94 6.94 0 0 0 10.875 1.5zm2.25 0v5.475a4.72 4.72 0 0 1 4.725 4.725c0 2.025-1.2 3.75-3 4.425v4.463c3.713-1.2 6.375-4.688 6.375-8.813C21.225 5.7 17.025 1.5 13.125 1.5h-1.05zM8.25 18.375v4.125h7.5v-4.125H8.25z" />
+                  </svg>
+                </span>
+                Railway
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Vercel Triangle Logo -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 1L24 22H0L12 1Z" />
+                  </svg>
+                </span>
+                Vercel
+              </span>
+            </div>
           </div>
 
-          <div class="card">
-            <span class="badge badge-purple" style="margin-bottom:0.5rem;">C3: Advisory &amp; RAG</span>
-            <h4 style="font-size:1.1rem; margin-bottom:0.5rem;">Knowledge &amp; Rules</h4>
-            <ul style="padding-left:1.25rem; font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
-              <li>Retrieval-Augmented Generation (RAG)</li>
-              <li>Pinecone Vector Database</li>
-              <li>BGE-large Embeddings</li>
-              <li>GPT-4o-mini &bull; OpenRouter API</li>
-              <li>Node.js &bull; Express.js</li>
-            </ul>
+          <!-- Card 4 — Machine Learning & Deep Learning -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Brain / Neural Network icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.04z">
+                  </path>
+                  <path
+                    d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.04z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">Machine Learning &amp; Deep Learning</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- PyTorch Flame Logo -->
+                  <svg viewBox="0 0 24 24" fill="#EE4C2C">
+                    <path
+                      d="M12.67 1.05a.75.75 0 0 0-.84 0C9.65 2.45 4.8 6.55 4.8 12.3c0 4.6 3.2 8.4 7.6 9.5a.75.75 0 0 0 .8 0c4.4-1.1 7.6-4.9 7.6-9.5 0-5.75-4.85-9.85-7.13-11.25zm-.27 2.2c1.7 1.3 5.4 4.7 5.4 9.05 0 3.5-2.3 6.5-5.6 7.4-3.3-.9-5.6-3.9-5.6-7.4 0-4.35 3.7-7.75 5.4-9.05zM15 9.7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                  </svg>
+                </span>
+                PyTorch
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                  </svg>
+                </span>
+                EfficientNetB3
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                </span>
+                DenseNet121
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Scikit-learn Logo -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="9" cy="12" r="5" fill="#F89939" />
+                    <circle cx="15" cy="12" r="5" fill="#3499CD" fill-opacity="0.85" />
+                  </svg>
+                </span>
+                Scikit-learn
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Hugging Face / Transformers -->
+                  <svg viewBox="0 0 24 24" fill="#FFD21E">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3 8c.83 0 1.5.67 1.5 1.5S9.83 13 9 13s-1.5-.67-1.5-1.5S8.17 10 9 10zm6 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zm-3 7.5c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z" />
+                  </svg>
+                </span>
+                BERT &amp; DistilBERT
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 5 — NLP, Speech & AI -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Microphone / Speech Waves icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                  <line x1="12" y1="19" x2="12" y2="23"></line>
+                  <line x1="8" y1="23" x2="16" y2="23"></line>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">NLP, Speech &amp; AI</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Whisper Audio Wave Logo -->
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#10A37F" stroke-width="2" stroke-linecap="round">
+                    <line x1="4" y1="9" x2="4" y2="15"></line>
+                    <line x1="8" y1="6" x2="8" y2="18"></line>
+                    <line x1="12" y1="3" x2="12" y2="21"></line>
+                    <line x1="16" y1="6" x2="16" y2="18"></line>
+                    <line x1="20" y1="9" x2="20" y2="15"></line>
+                  </svg>
+                </span>
+                Whisper ASR
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                  </svg>
+                </span>
+                TF-IDF
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </span>
+                BGE-large Embeddings
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- OpenAI / GPT Logo -->
+                  <svg viewBox="0 0 24 24" fill="#10A37F">
+                    <path
+                      d="M22.28 9.37a5.98 5.98 0 0 0-.52-4.99 6.04 6.04 0 0 0-6.49-2.9 6.04 6.04 0 0 0-4.6-2.07c-3.1 0-5.7 2.3-6.02 5.37a5.98 5.98 0 0 0-4.04 2.94 6.04 6.04 0 0 0 .74 7.07 5.98 5.98 0 0 0 .52 4.99 6.04 6.04 0 0 0 6.49 2.9A6.04 6.04 0 0 0 12.5 24.7c3.1 0 5.7-2.3 6.02-5.37a5.98 5.98 0 0 0 4.04-2.94 6.04 6.04 0 0 0-.74-7.07zM12.5 22.8c-2.3 0-4.3-1.6-4.7-3.9l.24-.14 3.96-2.29a1 1 0 0 1 1 0l3.35 1.93v.03a4.15 4.15 0 0 1-3.85 4.37zm-7.3-4.22a4.16 4.16 0 0 1-.55-3.87l.24.14 3.96 2.29a1 1 0 0 1 .5.87v3.86a4.16 4.16 0 0 1-4.15-3.29zm-1.9-8.4a4.16 4.16 0 0 1 3.3-1.74v4.58a1 1 0 0 1-.5.87L2.14 16.2a4.16 4.16 0 0 1 1.16-5.99zm14.4-1.87l-3.96 2.29a1 1 0 0 1-1 0L9.39 8.68V8.65a4.15 4.15 0 0 1 3.85-4.37c2.3 0 4.3 1.6 4.7 3.9l-.24.14zm3.96 6.09a4.16 4.16 0 0 1-.55 3.87l-.24-.14-3.96-2.29a1 1 0 0 1-.5-.87V8.58a4.16 4.16 0 0 1 5.25 4.43zM13.5 13.7l-1.5-.86-1.5.86V12l1.5-.86 1.5.86v1.7z" />
+                  </svg>
+                </span>
+                GPT-4o-mini &amp; RAG
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 6 — Tools & Model Evaluation -->
+          <div class="tech-category-card">
+            <div class="tech-card-header">
+              <div class="tech-card-icon-wrap" aria-hidden="true">
+                <!-- Wrench / Screwdriver Tools icon -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="tech-card-title">Tools &amp; Model Evaluation</h3>
+            </div>
+            <div class="tech-badges-list">
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- OpenCV Logo -->
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="7" r="4" fill="#ED1C24" />
+                    <circle cx="7" cy="16" r="4" fill="#00AEEF" />
+                    <circle cx="17" cy="16" r="4" fill="#00A651" />
+                  </svg>
+                </span>
+                OpenCV &amp; Grad-CAM
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Optuna / Tuning icon -->
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="4" y1="21" x2="4" y2="14"></line>
+                    <line x1="4" y1="10" x2="4" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12" y2="3"></line>
+                    <line x1="20" y1="21" x2="20" y2="16"></line>
+                    <line x1="20" y1="12" x2="20" y2="3"></line>
+                    <circle cx="4" cy="12" r="2"></circle>
+                    <circle cx="12" cy="10" r="2"></circle>
+                    <circle cx="20" cy="14" r="2"></circle>
+                  </svg>
+                </span>
+                Optuna
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- OOD Shield / Verification icon -->
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </span>
+                OOD Detection
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- Google Colab Logo -->
+                  <svg viewBox="0 0 24 24">
+                    <path fill="#F9AB00"
+                      d="M12 4.5C8.96 4.5 6.5 6.96 6.5 10c0 1.25.42 2.4 1.13 3.33l-2.02 2.02C4.38 13.9 3.5 12.05 3.5 10c0-4.69 3.81-8.5 8.5-8.5s8.5 3.81 8.5 8.5c0 2.05-.88 3.9-2.11 5.35l-2.02-2.02c.71-.93 1.13-2.08 1.13-3.33 0-3.04-2.46-5.5-5.5-5.5z" />
+                    <circle cx="12" cy="17.5" r="3.5" fill="#E37400" />
+                  </svg>
+                </span>
+                Google Colab
+              </span>
+              <span class="tech-chip">
+                <span class="tech-chip-icon" aria-hidden="true">
+                  <!-- GitHub Invertocat Logo -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                  </svg>
+                </span>
+                GitHub &amp; VS Code
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section" style="background:var(--bg-secondary);" id="technologies-used">
-      <div class="container">
-
       </div>
     </section>
 

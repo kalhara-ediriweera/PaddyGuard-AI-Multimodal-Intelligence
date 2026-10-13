@@ -88,6 +88,11 @@ img, svg, canvas, video {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
@@ -199,6 +204,11 @@ img, svg, canvas, video {
     gap: 1.5rem;
   }
 
+  .tech-stack-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.15rem;
+  }
+
   .gradcam-grid,
   .dosage-calc-grid,
   .voice-details-grid {
@@ -306,6 +316,11 @@ img, svg, canvas, video {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .tech-stack-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
