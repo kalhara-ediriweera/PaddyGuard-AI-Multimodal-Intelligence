@@ -79,7 +79,7 @@ const projectData = {
       image: "documents/member_1.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C1_IT22273680.pdf",
       technologies: ["OpenAI Whisper (large-v3)", "SentencePiece", "BERT / RoBERTa", "Sinhala TTS (Google/Coqui)", "PyTorch", "FastAPI"],
-      
+
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22273680@my.sliit.lk"
     },
@@ -94,7 +94,7 @@ const projectData = {
       image: "documents/member_2.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C2_IT22168740.pdf",
       technologies: ["ResNet50", "EfficientNetB3", "DenseNet121", "ODIN", "Mahalanobis Distance", "OpenMax", "Grad-CAM", "PyTorch"],
-      
+
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22168740@my.sliit.lk"
     },
@@ -109,7 +109,7 @@ const projectData = {
       image: "documents/member_3.jpg",
       proposalUrl: "documents/R26-SE-015_Proposal_Report_C3_IT22303820.pdf",
       technologies: ["Retrieval-Augmented Generation (RAG)", "FAISS / MongoDB Atlas Vector Search", "LangChain / Transformers", "Deterministic Rule Engine", "Dosage Engine", "FastAPI / Node.js"],
-      
+
       sharedDuties: "Literature review, dataset preparation, system integration, testing, evaluation, dissertation documentation.",
       email: "it22303820@my.sliit.lk"
     },
@@ -389,7 +389,7 @@ const projectData = {
       number: "04",
       name: "Final Assessment",
       assessment: "Final Dissertation & Code Submission",
-      status: "Upcoming",
+      status: "Completed",
       date: "October 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
@@ -402,7 +402,7 @@ const projectData = {
       number: "05",
       name: "Viva Voce",
       assessment: "Final Oral Defense & System Demonstration",
-      status: "Upcoming",
+      status: "Completed",
       date: "October 2026",
       marksAllocated: "To be updated",
       marksAwarded: "Pending evaluation",
@@ -419,10 +419,11 @@ const projectData = {
       title: "Project Charter (R26-SE-015)",
       code: "SE-CHARTER-01",
       category: "Project Charter",
-      description: "Official project charter outlining scope statement, objectives, stakeholder matrix, constraints, and twelve-month milestones approved by SLIIT.",
+      description: "The required form provided by the campus was completed and uploaded with the relevant project information as requested.",
       author: "PaddyGuard AI Research Team",
       fileUrl: "",
-      status: "To be updated"
+      status: "Available",
+      isAlreadyDone: true
     },
 
     {
@@ -504,8 +505,8 @@ const projectData = {
       category: "Check List documents",
       description: "Software engineering checklist report detailing containerized deployment, FastAPI endpoints, TLS security, and latency profiling under mobile networks.",
       author: "PaddyGuard AI Research Team",
-      fileUrl: "",
-      status: "To be updated"
+      fileUrl: "documents/Checklist 3.pdf",
+      status: "Available"
     },
 
     {
@@ -609,11 +610,11 @@ const projectData = {
       number: "04",
       title: "Final Presentation (Viva)",
       occasion: "Final Undergraduate Thesis Defense",
-      date: "To be updated",
-      status: "Upcoming",
-      slidesCount: "To be updated",
+      date: "October 2026",
+      status: "Completed",
+      slidesCount: "12 Slides",
       description: "Comprehensive oral defense and live system demonstration across all four components before internal and external examiners.",
-      fileUrl: "",
+      fileUrl: "documents/final-Presentation.pdf",
       topics: [
         "Final Multimodal System Evaluation",
         "Empirical Metrics Comparison Across All 4 Modules",

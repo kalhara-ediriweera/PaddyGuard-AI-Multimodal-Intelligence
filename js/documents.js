@@ -82,13 +82,22 @@ function initDocumentsPage() {
           </div>
 
           <div class="doc-actions">
-            <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="handleDocAction('${doc.id}', 'view')">
-              Document Info
-            </button>
-            <button class="btn btn-primary btn-sm" style="flex:1;" onclick="handleDocAction('${doc.id}', 'download')">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              ${doc.fileUrl ? 'Download PDF' : 'Download (Pending)'}
-            </button>
+            ${(doc.isAlreadyDone || doc.category === 'Project Charter' || doc.code === 'SE-CHARTER-01') ? `
+              <button class="btn btn-primary btn-sm" style="flex:1; justify-content:center; gap:6px;" onclick="handleDocAction('${doc.id}', 'done')">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Already Done
+              </button>
+            ` : `
+              <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="handleDocAction('${doc.id}', 'view')">
+                Document Info
+              </button>
+              <button class="btn btn-primary btn-sm" style="flex:1;" onclick="handleDocAction('${doc.id}', 'download')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                ${doc.fileUrl ? 'Download PDF' : 'Download (Pending)'}
+              </button>
+            `}
           </div>
         </div>
       `;
@@ -126,6 +135,8 @@ function handleDocAction(docId, action) {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
+  } else if (action === 'done' || doc.isAlreadyDone || doc.code === 'SE-CHARTER-01') {
+    showDocumentNotice(doc.title, 'Completed', doc.code);
   } else {
     showDocumentNotice(doc.title, doc.status, doc.code);
   }

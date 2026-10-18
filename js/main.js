@@ -200,9 +200,13 @@ function showDocumentNotice(title, status, code) {
   if (noticeTitle) noticeTitle.textContent = title;
   if (noticeCode) noticeCode.textContent = `Document Code: ${code || 'R26-SE-015'}`;
   if (noticeMsg) {
-    noticeMsg.textContent = status === 'Available' 
-      ? 'The requested research document is verified and linked in the central academic archive.'
-      : 'This research deliverable is in progress or scheduled for formal upload upon completion of the respective milestone assessment.';
+    if (code === 'SE-CHARTER-01' || status === 'Completed' || (title && title.includes('Project Charter'))) {
+      noticeMsg.textContent = 'The required Project Charter form has been successfully completed and uploaded with the relevant project information as requested.';
+    } else {
+      noticeMsg.textContent = status === 'Available' 
+        ? 'The requested research document is verified and linked in the central academic archive.'
+        : 'This research deliverable is in progress or scheduled for formal upload upon completion of the respective milestone assessment.';
+    }
   }
   openModal('doc-notice-modal');
 }
