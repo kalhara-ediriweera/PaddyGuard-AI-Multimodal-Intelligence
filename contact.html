@@ -121,15 +121,24 @@
           </p>
 
           <div id="contact-success-banner" class="form-success-banner" role="alert">
-            <strong>✅ Demonstration Mode Received:</strong><br>
-            Your inquiry inputs have been validated successfully in frontend evaluation mode. To reach the student
-            researchers directly, please use the institutional emails provided alongside.
+            <strong>✅ Inquiry Sent Successfully:</strong><br>
+            <span id="contact-success-text">Thank you for reaching out! Your research inquiry has been delivered directly to our team's inbox. We will get back to you soon.</span>
+          </div>
+
+          <div id="contact-error-banner" class="form-error-banner" role="alert">
+            <strong>⚠️ Message Delivery Failed:</strong><br>
+            <span id="contact-error-text">Unable to send your inquiry at this moment. Please email the researchers directly using the addresses on this page.</span>
           </div>
 
           <form id="research-contact-form" novalidate>
+            <!-- Web3Forms Form Configuration -->
+            <input type="hidden" name="access_key" id="contact-access-key" value="3646588a-4432-4899-9a99-d9055cba0a30">
+            <input type="hidden" name="from_name" value="PaddyGuard AI Portal">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <div class="form-group">
               <label for="contact-name">Full Name <span style="color:var(--brand-danger)">*</span></label>
-              <input type="text" id="contact-name" class="form-control"
+              <input type="text" id="contact-name" name="name" class="form-control"
                 placeholder="e.g. Prof. / Dr. / Mr. Sampath Silva" required>
               <div class="form-feedback">Please enter your name (minimum 2 characters).</div>
             </div>
@@ -137,31 +146,31 @@
             <div class="form-group">
               <label for="contact-email">Institutional / Professional Email <span
                   style="color:var(--brand-danger)">*</span></label>
-              <input type="email" id="contact-email" class="form-control" placeholder="e.g. name@university.edu"
+              <input type="email" id="contact-email" name="email" class="form-control" placeholder="e.g. name@university.edu"
                 required>
               <div class="form-feedback">Please provide a valid email address.</div>
             </div>
 
             <div class="form-group">
               <label for="contact-subject">Inquiry Subject <span style="color:var(--brand-danger)">*</span></label>
-              <input type="text" id="contact-subject" class="form-control"
+              <input type="text" id="contact-subject" name="subject" class="form-control"
                 placeholder="e.g. Request for OOD Benchmark Details / Assessment Query" required>
               <div class="form-feedback">Subject line is required (minimum 5 characters).</div>
             </div>
 
             <div class="form-group">
               <label for="contact-category">Inquiry Category</label>
-              <select id="contact-category" class="form-control">
-                <option value="evaluation">University Assessment &amp; Evaluation</option>
-                <option value="dataset">Dataset Access &amp; Annotation Protocol</option>
-                <option value="architecture">Machine Learning Architecture &amp; OOD</option>
-                <option value="general">General Agricultural Informatics</option>
+              <select id="contact-category" name="category" class="form-control">
+                <option value="University Assessment & Evaluation">University Assessment &amp; Evaluation</option>
+                <option value="Dataset Access & Annotation Protocol">Dataset Access &amp; Annotation Protocol</option>
+                <option value="Machine Learning Architecture & OOD">Machine Learning Architecture &amp; OOD</option>
+                <option value="General Agricultural Informatics">General Agricultural Informatics</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="contact-message">Message Content <span style="color:var(--brand-danger)">*</span></label>
-              <textarea id="contact-message" class="form-control" placeholder="Write your research query here..."
+              <textarea id="contact-message" name="message" class="form-control" placeholder="Write your research query here..."
                 rows="5" required></textarea>
               <div class="form-feedback">Please write a message of at least 15 characters.</div>
             </div>
@@ -343,7 +352,7 @@
   <script src="js/main.js"></script>
   <script src="js/search.js"></script>
 
-  <!-- Contact Form Validation Script -->
+  <!-- Contact Form Submission & Validation Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('research-contact-form');
@@ -352,6 +361,10 @@
       const subjectInput = document.getElementById('contact-subject');
       const messageInput = document.getElementById('contact-message');
       const successBanner = document.getElementById('contact-success-banner');
+      const successText = document.getElementById('contact-success-text');
+      const errorBanner = document.getElementById('contact-error-banner');
+      const errorText = document.getElementById('contact-error-text');
+      const submitBtn = document.getElementById('contact-submit-btn');
 
       if (!form) return;
 
@@ -359,9 +372,13 @@
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       }
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         let isValid = true;
+
+        // Reset banners
+        if (successBanner) successBanner.style.display = 'none';
+        if (errorBanner) errorBanner.style.display = 'none';
 
         // Name
         if (nameInput.value.trim().length < 2) {
@@ -395,12 +412,76 @@
           messageInput.classList.remove('is-invalid');
         }
 
-        if (isValid) {
-          if (successBanner) {
-            successBanner.style.display = 'block';
-            successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        if (!isValid) return;
+
+        const originalBtnHtml = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <svg style="display:inline-block; vertical-align:middle; margin-right:8px; animation:spin 1s linear infinite;" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="2" x2="12" y2="6"></line>
+            <line x1="12" y1="18" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="6" y2="12"></line>
+            <line x1="18" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+          </svg>
+          Submitting Inquiry...
+        `;
+
+        const accessKey = document.getElementById('contact-access-key')?.value?.trim();
+
+        // If access key is not yet provided, show demo message with setup guidance
+        if (!accessKey || accessKey === 'YOUR_ACCESS_KEY_HERE') {
+          setTimeout(() => {
+            if (successBanner) {
+              if (successText) {
+                successText.innerHTML = 'Your inquiry input has been validated successfully.<br><br>💡 <strong>Note:</strong> To receive actual emails in your inbox, generate a free key from <a href="https://web3forms.com/" target="_blank" style="text-decoration:underline; font-weight:600; color:inherit;">web3forms.com</a> and paste it into the <code>contact-access-key</code> value in <code>contact.html</code>.';
+              }
+              successBanner.style.display = 'block';
+              successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+            form.reset();
+          }, 600);
+          return;
+        }
+
+        try {
+          const formData = new FormData(form);
+          const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+            if (successBanner) {
+              if (successText) {
+                successText.textContent = 'Thank you for reaching out! Your research inquiry has been delivered directly to our team\'s inbox. We will get back to you soon.';
+              }
+              successBanner.style.display = 'block';
+              successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            form.reset();
+          } else {
+            throw new Error(result.message || 'Submission failed. Please try again.');
           }
-          form.reset();
+        } catch (err) {
+          console.error('Contact submission error:', err);
+          if (errorBanner) {
+            if (errorText) {
+              errorText.textContent = err.message || 'Could not send message. Please reach out to the researchers directly via institutional email.';
+            }
+            errorBanner.style.display = 'block';
+            errorBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
         }
       });
     });
